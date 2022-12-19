@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  margin: 50px 70px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  background-image: url("../img/noise.png");
+}
+
+#root {
+  flex-grow: 1;
+}

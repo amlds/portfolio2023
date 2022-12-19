@@ -1,0 +1,11 @@
+//import config
+@import './config/colors';
+@import './config/font';
+@import './config/basics';
+
+
+//import components
+@import './components/index.scss';
+
+//import views
+@import './view/home.scss';

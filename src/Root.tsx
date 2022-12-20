@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import Home from './views/Home';
 import Contact from './views/Contact';
+import PageNotFound from './views/pageNotFound';
 
 export default function Root() {
   return (
@@ -10,6 +11,7 @@ export default function Root() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

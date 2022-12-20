@@ -1,0 +1,58 @@
+/* .contact {
+  position: relative;
+  transform: rotate(45deg);
+  top: 50px;
+  right: 50px;
+  max-width: 40%;
+  overflow: hidden;
+
+  &__text {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+
+    & p {
+      display: inline-block;
+    }
+  }
+}
+ */
+
+
+
+
+ .contact {
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(45deg);
+  top: 50px;
+  right: -90px;
+
+  &__text {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+
+    border-bottom: 4px solid $text-color;
+    border-top: 4px solid $text-color;
+
+    & p {
+      display: inline-block;
+      line-height: 300%;
+    }
+  }
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

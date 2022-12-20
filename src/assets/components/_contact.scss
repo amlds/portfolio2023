@@ -1,35 +1,10 @@
-/* .contact {
-  position: relative;
-  transform: rotate(45deg);
-  top: 50px;
-  right: 50px;
-  max-width: 40%;
-  overflow: hidden;
-
-  &__text {
-    position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: marquee 10s linear infinite;
-
-    & p {
-      display: inline-block;
-    }
-  }
-}
- */
-
-
-
-
- .contact {
-  max-width: 400px;
+.contact {
+  max-width: 500px;
   position: relative;
   overflow: hidden;
   transform: rotate(45deg);
-  top: 50px;
-  right: -90px;
+  top: 25px;
+  right: -100px;
 
   &__text {
     white-space: nowrap;

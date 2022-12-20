@@ -1,19 +1,61 @@
 body {
   margin: 0;
   background-color: $background;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-main {
-  margin: 50px 70px;
-  padding: 16px;
-  border: 1px solid #ccc;
+.background {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+
+  border: 1px solid $text-color;
   background-image: url("../img/noise.png");
 }
 
 #root {
-  flex-grow: 1;
+  margin: 50px;
+  padding: 16px;
+
+}
+
+
+h1, h2, h3, p {
+  margin: 0;
+  color: $text-color;
+  line-height: 150%;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Cabinet";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Cabinet";
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Cabinet";
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Satoshi";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  font-family: "Satoshi";
+  font-size: 1rem;
+  font-weight: 400;
 }

@@ -1,9 +1,11 @@
 import React from 'react';
-import Home from './views/home';
+import Root from './Root';
 
 function App() {
   return (
-    <><Home /></>
+    <>
+      <Root />
+    </>
   );
 }
 

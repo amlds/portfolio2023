@@ -1,6 +1,8 @@
 body {
   margin: 0;
   background-color: $background;
+  /* cursor: none; */
+  overflow-x: hidden;
 }
 
 .background {
@@ -11,17 +13,10 @@ body {
   bottom: 50px;
 
   border: 4px solid $text-color;
-  background-image: url("../img/noise.png");
-}
-.backgroundBorder {
   z-index: 100;
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  right: 50px;
-  bottom: 50px;
 
-  outline: 100px solid $background
+  outline: 100px solid $background;
+  background-image: url("../img/noise.png");
 }
 
 

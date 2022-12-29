@@ -1,31 +1,12 @@
 body {
-  margin: 0;
-  background-color: $background;
-  /* cursor: none; */
+  width: min(100% - 1em, 100em);
+  margin-inline: auto;
   overflow-x: hidden;
 }
 
-.background {
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  right: 50px;
-  bottom: 50px;
-
-  border: 4px solid $text-color;
-  z-index: 100;
-
-  outline: 100px solid $background;
-  background-image: url("../img/noise.png");
+section {
+  min-height: 80vh;
 }
-
-
-#root {
-  margin: 50px;
-  padding: 16px;
-
-}
-
 
 h1, h2, h3, p {
   margin: 0;

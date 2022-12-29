@@ -1,0 +1,37 @@
+.decoration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+    h1 {
+      font-size: 175px;
+      line-height: 100%;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+    .rectangle{
+      flex-grow: 1;
+      height: 130px;
+
+    }
+  }
+
+  .footerDecoration {
+    gap: 40%;
+    div{
+      flex-grow: 1;
+    }
+  }
+
+}
+
+.rectangle {
+  border: 2px solid $text-color;
+  border-radius: 10em;
+}

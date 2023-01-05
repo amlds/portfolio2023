@@ -1,9 +1,26 @@
+import HoverLink from "./HoverLink";
+
 export default function Header() {
   return (
     <header>
-        <p>À propos</p>
-        <p>Projets</p>
-        <p className="button">Contact</p>
+        <HoverLink infos={
+          {
+            name: "À propos",
+            font: ["1.5rem", "Satoshi"]
+          }
+        }/>
+        <HoverLink infos={
+          {
+            name: "Projets",
+            font: ["1.5rem", "Satoshi"]
+          }
+        }/>
+        <HoverLink infos={
+          {
+            name: "Contact",
+            font: ["1.5rem", "Satoshi"]
+          }
+        }/>
     </header>
   );
 }

@@ -20,7 +20,7 @@ class Decoration extends React.Component {
           <div>
             <p>Designer UX/UI</p>
             <p>Freelance</p>
-            <p>@2023</p>
+            <p>@2023 V1.0</p>
           </div>
         </div>
       </section>

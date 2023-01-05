@@ -1,35 +1,36 @@
 import React from "react";
 
+import HoverLink from "./HoverLink";
+
 interface Props {
   project: {
     title: string;
     description: string;
     tags: string[];
-    link: string;
   };
 }
 
-class ProjectContent extends React.Component<Props> {
+class NavProject extends React.Component<Props> {
   render() {
     return (
-      <section className="projectContent">
-        <div className="projectContent__content">
-          <h1>{this.props.project.title}</h1>
+      <div className="navProject">
+        <div className="navProject__content">
           <p>{this.props.project.description}</p>
-          <div className="projectContent__tags">
+          <HoverLink infos={
+            {
+              name: this.props.project.title,
+              font: ["3rem", "Cabinet-Black"]
+            }
+          }/>
+          <div className="navProject__tags">
             {this.props.project.tags.map((tag, index) => {
-              return <p key={index}>{tag}</p>;
+              return <p key={index} className="tag md-1">{tag}</p>;
             })}
           </div>
-          <div className="projectContent__links">
-            <a href={this.props.project.link} target="_blank">
-              <p>Visiter le site</p>
-            </a>
-          </div>
         </div>
-      </section>
+      </div>
     );
   }
 }
 
-export default ProjectContent;
+export default NavProject;

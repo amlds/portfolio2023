@@ -4,12 +4,12 @@ body {
 }
 
 section {
-  min-height: 80vh;
-  width: min(100% - 1em, 100em);
+  min-height: 90vh;
+  width: min(100% - 1em, 95em);
   margin: 0 auto;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   margin: 0;
   color: $text-color;
   line-height: 150%;
@@ -17,9 +17,8 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font-family: "Cabinet";
+  font-family: "Cabinet-black";
   font-size: 3rem;
-  font-weight: 700;
 }
 
 h2 {
@@ -31,6 +30,12 @@ h2 {
 h3 {
   font-family: "Cabinet";
   font-size: 2rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Cabinet";
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -50,6 +55,7 @@ a {
 
 .md-1 {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .center {

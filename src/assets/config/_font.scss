@@ -3,6 +3,11 @@
   src: local("Cabinet"),
     url("../font/CabinetGrotesk-Variable.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Cabinet-Black";
+  src: local("Cabinet"),
+    url("../font/CabinetGrotesk-Black.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "Satoshi";

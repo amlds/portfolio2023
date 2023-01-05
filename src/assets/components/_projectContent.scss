@@ -1,0 +1,30 @@
+.project {
+  display: flex;
+  justify-content: space-between;
+  gap: 130px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+
+  &__decoration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .rectangle {
+      flex-grow: 1;
+      width: 130px;
+    }
+  }
+
+  &__content {
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 3rem;
+  }
+}

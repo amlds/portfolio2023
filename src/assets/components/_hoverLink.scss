@@ -1,0 +1,21 @@
+span {
+  font-family: var(--u);
+  font-size: var(--f);
+  opacity: 1;
+  color: $text-color;
+}
+
+.hoverLink {
+  display: flex;
+}
+
+.h{
+  cursor:pointer;
+  transition: opacity .4s cubic-bezier(.23,1,.32,1) calc(.05s * (var(--t) - var(--i)) + .2s);
+}
+
+.hoverLink:hover{
+  .h{
+    opacity: 0.3;
+  }
+}

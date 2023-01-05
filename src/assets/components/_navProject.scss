@@ -1,0 +1,12 @@
+.navProject {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid $text-color;
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+}

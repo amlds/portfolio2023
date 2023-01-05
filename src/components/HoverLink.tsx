@@ -38,7 +38,6 @@ class HoverLink extends React.Component<Props> {
   }
 
   render() {
-    console.log(this.component);
     return (
       <div className="hoverLink">
         {this.component()}

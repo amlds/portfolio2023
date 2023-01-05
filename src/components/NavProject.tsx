@@ -19,7 +19,7 @@ class NavProject extends React.Component<Props> {
           <HoverLink infos={
             {
               name: this.props.project.title,
-              font: ["3rem", "Cabinet-Black"]
+              font: ["6rem", "Cabinet-Black"]
             }
           }/>
           <div className="navProject__tags">

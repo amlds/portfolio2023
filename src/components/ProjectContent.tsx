@@ -8,9 +8,11 @@ export default function ProjectContent() {
     <section>
       <div className="project">
         <div className="project__decoration">
-          <Logo />
-          <h4>2022</h4>
+          <div className="sticky">
+            <Logo />
+            <h4>2022</h4>
           <div className="rectangle"></div>
+          </div>
         </div>
         <div className="project__content">
             <Link to="/project" className="project__content__text__link">
@@ -27,7 +29,7 @@ export default function ProjectContent() {
                 {
                   title: "Vel-Watt",
                   description: "Vélo pédagogique",
-                  tags: ["React", "TypeScript", "Sass"],
+                  tags: ["React", "Node.JS", "Three.JS" , "Sass" , "Figma", "UX/UI-Design"],
                 }
               }/>
             </Link>
@@ -36,7 +38,7 @@ export default function ProjectContent() {
                 {
                   title: "Cabinet Rostaing",
                   description: "Actualité de comptabilité",
-                  tags: ["React", "TypeScript", "Sass"],
+                  tags: ["Figma", "UX/UI-Design", "BravoStudio"],
                 }
               }/>
             </Link>
@@ -45,7 +47,7 @@ export default function ProjectContent() {
                 {
                   title: "Compét' en vill'",
                   description: "Actualité de comptabilité",
-                  tags: ["React", "TypeScript", "Sass"],
+                  tags: ["Figma", "UX/UI-Design"],
                 }
               }/>
             </Link>

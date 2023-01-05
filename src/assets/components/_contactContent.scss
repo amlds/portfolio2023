@@ -1,0 +1,34 @@
+.contactContent {
+  background-color: $text-color;
+
+  padding: 10% 0;
+
+  border-radius: 50% 50% 0 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+
+  &__text {
+    p {
+      color: $background;
+    }
+  }
+
+  &__link {
+    display: flex;
+    gap: 24px;
+    .button {
+      color: $background;
+      border-color: $background;
+    }
+  }
+
+  .banner p {
+    color: $background;
+  }
+  .banner, .banner div {
+    border-color: $background;
+  }
+}

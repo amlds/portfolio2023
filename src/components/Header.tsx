@@ -1,16 +1,26 @@
+import HoverLink from "./HoverLink";
+
 export default function Header() {
   return (
     <header>
-      <div className='headerText'>
-        <h3>Alexy Martinet</h3>
-        <p>@AMLDS</p>
-        <p>Developper / Designer</p>
-      </div>
-      <div className="contact">
-        <span className='contact__text'>
-          <p>CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ CONTACT ○ </p>
-        </span>
-      </div>
+        <HoverLink infos={
+          {
+            name: "À propos",
+            font: ["1.5rem", "Satoshi"]
+          }
+        }/>
+        <HoverLink infos={
+          {
+            name: "Projets",
+            font: ["1.5rem", "Satoshi"]
+          }
+        }/>
+        <HoverLink infos={
+          {
+            name: "Contact",
+            font: ["1.5rem", "Satoshi"]
+          }
+        }/>
     </header>
   );
 }

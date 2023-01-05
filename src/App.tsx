@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Root />
-      <Cursor />
+      {/* <Cursor /> */}
     </>
   );
 }

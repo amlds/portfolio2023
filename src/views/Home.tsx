@@ -1,25 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Banner from "../components/Banner";
 
 //import components
-import Logo from "../components/Logo";
 import Header from "../components/Header";
-import Project from "./Project";
+import Decoration from "../components/Decoration";
+import AboutContent from "../components/AboutContent";
+import ProjectContent from "../components/ProjectContent";
 
 export default function Home() {
   return (
     <main>
       <div className="home">
         <Header />
-        <Logo />
-        <section className="P">
-          {/* link page project */}
-          <NavLink
-            to="project"
-          >
-            Project
-          </NavLink>
-        </section>
+        <Decoration />
+        <Banner message="À PROPOS" />
+        <AboutContent />
+        <Banner message="PROJECT" />
+        <ProjectContent />
       </div>
     </main>
   );

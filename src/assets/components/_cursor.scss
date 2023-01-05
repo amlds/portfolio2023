@@ -2,8 +2,13 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  background: #fff;
+  background: url(../img/noise.png), rgba(0, 0, 0, 0.298);
+  background-blend-mode: darken, normal;
+  backdrop-filter: blur(5px);
   border-radius: 50%;
+
+  border: 1px solid #101010;
+
   top: var(--y, 0);
   left: var(--x, 0);
   transform: translate(-50%, -50%);

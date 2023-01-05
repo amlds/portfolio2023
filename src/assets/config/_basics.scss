@@ -1,11 +1,12 @@
 body {
-  width: min(100% - 1em, 100em);
   margin-inline: auto;
   overflow-x: hidden;
 }
 
 section {
   min-height: 80vh;
+  width: min(100% - 1em, 100em);
+  margin: 0 auto;
 }
 
 h1, h2, h3, p {
@@ -17,25 +18,25 @@ h1, h2, h3, p {
 
 h1 {
   font-family: "Cabinet";
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 h2 {
   font-family: "Cabinet";
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
 h3 {
   font-family: "Cabinet";
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 p {
   font-family: "Satoshi";
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -45,4 +46,14 @@ a {
   font-family: "Satoshi";
   font-size: 1rem;
   font-weight: 400;
+}
+
+.md-1 {
+  font-size: 1.5rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

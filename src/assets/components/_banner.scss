@@ -1,0 +1,38 @@
+.banner {
+  border: 2px solid $text-color;
+  position: relative;
+  left: -10px;
+  width: 120%;
+  overflow: hidden;
+
+  &__content {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: textScroll 60s linear infinite;
+
+      .rectangle {
+        padding: 0.5rem;
+        margin: 0 2rem;
+        width: 80px;
+        border: 6px solid $text-color;
+        display: inline-block;
+      }
+
+      p {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 150%;
+        display: inline-block;
+      }
+  }
+}
+
+@keyframes textScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

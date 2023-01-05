@@ -1,0 +1,29 @@
+.aboutContent {
+  padding: 5% 0;
+  height: 100vh;
+
+  .aboutContent__flex {
+    display: flex;
+    justify-content: center;
+    .rectangle {
+      width: 130px;
+    }
+
+    .aboutContent__text{
+      width: 60%;
+      padding: 0 1rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .center {
+      .logo {
+        svg {
+          width: 150%;
+          height: 150%;
+        }
+      }
+    }
+  }
+}

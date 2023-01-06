@@ -13,10 +13,10 @@ class ContactContent extends React.Component{
         <div className="contactContent__text">
           {/*<p>Je suis disponible pour tout projet freelance ou en agence.</p>*/}        </div>
         <div className="contactContent__link">
-          <a href="" className="button">Linkedin</a>
-          <a href="" className="button">Github</a>
-          <a href="" className="button">Twitter</a>
-          <a href="" className="button">Instagram</a>
+          <a href="https://www.linkedin.com/in/alexy-martinet-9a6580168/" className="button">Linkedin</a>
+          <a href="https://github.com/amlds" className="button">Github</a>
+          <a href="https://twitter.com/amlds_ma" className="button">Twitter</a>
+          <a href="https://www.instagram.com/amlds/" className="button">Instagram</a>
         </div>
         <Banner message="CONTACT"/>
         <div className="Rounded"></div>

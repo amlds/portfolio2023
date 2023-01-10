@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Decoration from "../components/Decoration";
 import AboutContent from "../components/AboutContent";
 import ProjectContent from "../components/ProjectContent";
+import ContactContent from "../components/ContactContent"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <AboutContent />
         <Banner message="PROJECT" />
         <ProjectContent />
+        <ContactContent />
       </div>
     </main>
   );

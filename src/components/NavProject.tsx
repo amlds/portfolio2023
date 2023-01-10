@@ -23,9 +23,11 @@ class NavProject extends React.Component<Props> {
             }
           }/>
           <div className="navProject__tags">
-            {this.props.project.tags.map((tag, index) => {
-              return <p key={index} className="tag md-1">{tag}</p>;
-            })}
+            {
+              this.props.project.tags.map((tag, index) => {
+                return <p key={index} className="tag md-1">{tag}</p>;
+              })
+            }
           </div>
         </div>
       </div>

@@ -1,0 +1,11 @@
+.rounded {
+  border-radius: 50%;
+  margin: 0 auto;
+  opacity: 0;
+  background-color: aqua;
+  width: 1px;
+  height: 1px;
+  top: 500;
+  transform-origin:center;
+  position: sticky;
+}

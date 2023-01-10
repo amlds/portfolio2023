@@ -7,13 +7,13 @@ class Decoration extends React.Component {
     return (
       <section className="decoration">
         <div>
-          <h1>ALEXY</h1>
+          <h1>AM</h1>
           <div className="rectangle"></div>
+          <Logo />
         </div>
         <div>
-          <Logo />
           <div className="rectangle"></div>
-          <h1>MARTINET</h1>
+          <h1>PRODUCTION</h1>
         </div>
         <div className="footerDecoration">
           <p>Front-End Développeur</p>

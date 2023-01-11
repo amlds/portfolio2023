@@ -1,0 +1,16 @@
+{
+  "project1": {
+    "id": 1,
+    "title": "Projet 1",
+    "description": "Description du projet 1",
+    "image": "https://picsum.photos/200/300",
+    "tags": "tag1"
+  },
+  "project2": {
+    "id": 2,
+    "title": "Projet 2",
+    "description": "Description du projet 2",
+    "image": "https://picsum.photos/200/300",
+    "tags": "tag1"
+  }
+}

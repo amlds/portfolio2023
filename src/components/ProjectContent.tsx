@@ -1,9 +1,34 @@
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import NavProject from "./NavProject";
 
-import NavProject from "../components/NavProject";
 import Logo from "../components/Logo";
 
-export default function ProjectContent() {
+
+interface Props {
+  project: {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+  };
+}
+
+interface ProjectList {
+  [key: string]: Props;
+}
+
+const ProjectContent: React.FC = () => {
+  const [projects, setProjects] = useState<ProjectList>({});
+
+  useEffect(() => {
+    fetch("../data/dataProject.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setProjects(data);
+      });
+  }, []);
+
   return (
     <section>
       <div className="project">
@@ -11,48 +36,17 @@ export default function ProjectContent() {
           <div className="sticky">
             <Logo />
             <h4>2022</h4>
-          <div className="rectangle"></div>
+            <div className="rectangle"></div>
           </div>
         </div>
         <div className="project__content">
-            <Link to="/project" className="project__content__text__link">
-              <NavProject project={
-                {
-                  title: "AM-PRODUCTION",
-                  description: "Mon portfolio",
-                  tags: ["React", "TypeScript", "Sass"],
-                }
-              }/>
-            </Link>
-            <Link to="/project" className="project__content__text__link">
-              <NavProject project={
-                {
-                  title: "Vel-Watt",
-                  description: "Vélo pédagogique",
-                  tags: ["React", "Node.JS", "Three.JS" , "Sass" , "Figma", "UX/UI-Design"],
-                }
-              }/>
-            </Link>
-            <Link to="/project" className="project__content__text__link">
-              <NavProject project={
-                {
-                  title: "Cabinet Rostaing",
-                  description: "Actualité de comptabilité",
-                  tags: ["Figma", "UX/UI-Design", "BravoStudio"],
-                }
-              }/>
-            </Link>
-            <Link to="/project" className="project__content__text__link">
-              <NavProject project={
-                {
-                  title: "Compét' en vill'",
-                  description: "Actualité de comptabilité",
-                  tags: ["Figma", "UX/UI-Design"],
-                }
-              }/>
-            </Link>
+          {Object.keys(projects).map((key) => (
+            <NavProject key={key} project={projects[key]} />
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default ProjectContent;

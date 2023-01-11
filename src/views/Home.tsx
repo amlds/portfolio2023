@@ -1,14 +1,16 @@
 import React from "react";
 import Banner from "../components/Banner";
 
-//import components
+/* import Chargement from "../components/Chargement"; */
 import Header from "../components/Header";
 import Decoration from "../components/Decoration";
 import AboutContent from "../components/AboutContent";
 import ProjectContent from "../components/ProjectContent";
 import ContactContent from "../components/ContactContent"
 
-export default function Home() {
+interface Props { }
+
+const Home: React.FC<Props> = (props) => {
   return (
     <main>
       <div className="home">
@@ -23,3 +25,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;

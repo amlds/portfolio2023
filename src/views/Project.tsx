@@ -1,10 +1,14 @@
-import React from "react";
+import { useParams } from 'react-router-dom';
 
+interface Props { }
 
-export default function project() {
-  return(
+const Project: React.FC<Props> = (props) => {
+  const { id } = useParams();
+  return (
     <div>
-      <p>Poject</p>
+      <h1>Project {id}</h1>
     </div>
-  )
+  );
 }
+
+export default Project;

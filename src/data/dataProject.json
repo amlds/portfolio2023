@@ -1,16 +1,37 @@
 {
   "project1": {
     "id": 1,
-    "title": "Projet 1",
-    "description": "Description du projet 1",
+    "title": "Vel-Watt",
+    "description": "Vélo pédagogique",
     "image": "https://picsum.photos/200/300",
-    "tags": "tag1"
+    "tags": ["React.js", "Node.js", "SCSS", "Figma", "UX/UI design" ]
   },
   "project2": {
     "id": 2,
-    "title": "Projet 2",
-    "description": "Description du projet 2",
+    "title": "AM-PROD",
+    "description": "Generateur de brainstorming",
     "image": "https://picsum.photos/200/300",
-    "tags": "tag1"
+    "tags": ["React.js", "TypeScript", "SCSS", "UX/UI design"]
+  },
+  "project3": {
+    "id": 3,
+    "title": "Brainstormer3000",
+    "description": "Vélo pédagogique",
+    "image": "https://picsum.photos/200/300",
+    "tags": ["HTML", "CSS", "JS"]
+  },
+  "project4": {
+    "id": 4,
+    "title": "Compet' en vill'",
+    "description": "Vélo pédagogique",
+    "image": "https://picsum.photos/200/300",
+    "tags": ["Figma", "UX/UI design"]
+  },
+  "project5": {
+    "id": 5,
+    "title": "Cabinet Rostaing",
+    "description": "Vélo pédagogique",
+    "image": "https://picsum.photos/200/300",
+    "tags": ["Figma", "UX/UI design", "BravoStudio"]
   }
 }

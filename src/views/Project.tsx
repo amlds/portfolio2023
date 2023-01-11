@@ -1,14 +1,46 @@
 import { useParams } from 'react-router-dom';
 
-interface Props { }
+const Projects: ProjectList = require('../data/dataProject.json');
 
-const Project: React.FC<Props> = (props) => {
-  const { id } = useParams();
+interface Props {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
+
+interface ProjectList {
+  [key: string]: Props;
+}
+
+
+const getProjectById = (id: number): Props | undefined => {
+  return Object.values(Projects).find((project: Props) => project.id === id);
+};
+
+const Project: React.FC = () => {
+  const { id } = useParams<{id: string}>();
+  const project = getProjectById(Number(id));
+
   return (
     <div>
-      <h1>Project {id}</h1>
+      {project ? (
+        <div>
+          <h1>{project.title}</h1>
+          <p>{project.description}</p>
+          <img src={project.image} alt={project.title} />
+          <div>
+            {project.tags.map((tag, index) => (
+              <span key={index}>{tag}</span>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <p>Projet non trouvé</p>
+      )}
     </div>
   );
-}
+};
 
 export default Project;

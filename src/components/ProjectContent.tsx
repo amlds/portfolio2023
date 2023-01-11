@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NavProject from "./NavProject";
 
 import Logo from "../components/Logo";
 
+import Projects from '../data/dataProject.json';
 
 interface Props {
   project: {
@@ -14,21 +15,7 @@ interface Props {
   };
 }
 
-interface ProjectList {
-  [key: string]: Props;
-}
-
 const ProjectContent: React.FC = () => {
-  const [projects, setProjects] = useState<ProjectList>({});
-
-  useEffect(() => {
-    fetch("../data/dataProject.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setProjects(data);
-      });
-  }, []);
-
   return (
     <section>
       <div className="project">
@@ -40,8 +27,8 @@ const ProjectContent: React.FC = () => {
           </div>
         </div>
         <div className="project__content">
-          {Object.keys(projects).map((key) => (
-            <NavProject key={key} project={projects[key]} />
+          {Object.values(Projects).map((project) => (
+            <NavProject key={project.id} project={project} />
           ))}
         </div>
       </div>

@@ -5,7 +5,7 @@ import Logo from "../components/Logo";
 
 import Projects from '../data/dataProject.json';
 
-interface Props {
+/* interface Props {
   project: {
     id: number;
     title: string;
@@ -13,7 +13,7 @@ interface Props {
     image: string;
     tags: string[];
   };
-}
+} */
 
 const ProjectContent: React.FC = () => {
   return (

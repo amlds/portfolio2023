@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import Decoration from "../components/Decoration";
 import AboutContent from "../components/AboutContent";
 import ProjectContent from "../components/ProjectContent";
-import ContactContent from "../components/ContactContent"
+import TestScroll from "../components/TestScroll"
 
 interface Props { }
 
@@ -20,7 +20,7 @@ const Home: React.FC<Props> = (props) => {
         <AboutContent />
         <Banner message="PROJECT" />
         <ProjectContent />
-        <ContactContent />
+        <TestScroll />
       </div>
     </main>
   );

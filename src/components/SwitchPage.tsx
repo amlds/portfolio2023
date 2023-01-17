@@ -8,18 +8,15 @@ interface Props {
 
 const SwitchPage: React.FC<Props> = ({ children }) => {
   const location = useLocation();
-  console.log(location.pathname)
 
   return (
-    <TransitionGroup>
-      <CSSTransition
-        key={location.pathname}
-        timeout={300}
-        classNames="slide"
-      >
-        <Routes location={location}>{children}</Routes>
-      </CSSTransition>
-    </TransitionGroup>
+      <TransitionGroup>
+        <CSSTransition  key={location.pathname}
+                        timeout={300}
+                        classNames="slide">
+          <Routes location={location}>{children}</Routes>
+        </CSSTransition>
+      </TransitionGroup>
   );
 };
 

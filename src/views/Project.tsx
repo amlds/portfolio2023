@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const Projects: ProjectList = require('../data/dataProject.json');
 
@@ -39,6 +39,7 @@ const Project: React.FC = () => {
       ) : (
         <p>Projet non trouvé</p>
       )}
+      <Link to={`/`}>Retour</Link>
     </div>
   );
 };

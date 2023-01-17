@@ -1,4 +1,4 @@
-.rounded {
+/* .rounded {
   border-radius: 50%;
   margin: 0 auto;
   opacity: 0;
@@ -8,4 +8,16 @@
   top: 500;
   transform-origin:center;
   position: sticky;
+}
+ */
+
+.circle{
+  background-color: $text-color;
+  border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
+  width: 1px;
+  height: 1px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

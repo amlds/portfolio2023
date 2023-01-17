@@ -13,11 +13,11 @@
 
 .circle{
   background-color: $text-color;
-  border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
-  width: 1px;
-  height: 1px;
-  position: relative;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: sticky;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform-origin: center;
 }

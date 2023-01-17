@@ -3,8 +3,8 @@ import { useInView } from 'react-intersection-observer';
 
 const Contact: React.FC = () => {
   const circleRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const [contactRef, inView] = useInView({
-      /* options */
       threshold: 0.5,
       triggerOnce: true
   });
@@ -14,10 +14,8 @@ const Contact: React.FC = () => {
           const observer = new IntersectionObserver((entries) => {
               entries.forEach((entry) => {
                   if (entry.isIntersecting) {
-                      // Ajoutez un écouteur d'événements de défilement
                       window.addEventListener('scroll', handleScroll);
                   } else {
-                      // Retournez une fonction de nettoyage pour retirer l'écouteur d'événements de défilement
                       window.removeEventListener('scroll', handleScroll);
                       if (circleRef.current) {
                           circleRef.current.style.transform = `scale(1)`;
@@ -26,8 +24,6 @@ const Contact: React.FC = () => {
               });
           });
           observer.observe(circleRef.current);
-
-          // Copiez la référence dans une variable locale
           const circle = circleRef.current;
           return () => {
               observer.unobserve(circle);
@@ -40,13 +36,18 @@ const Contact: React.FC = () => {
       }
 
       function handleScroll() {
-          // Récupérez la position de défilement actuelle
-          const scrollPosition = window.pageYOffset;
-          // Modifiez la taille de l'élément de cercle en fonction de la position de défilement
-          if (circleRef.current) {
-            circleRef.current.style.transform = `scale(${scrollPosition * 0.45})`;
-            circleRef.current.style.transition = `transform 0.5s ease-out`;
+        const scrollPosition = window.pageYOffset;
+
+        if (circleRef.current) {
+          const maxHeight = window.innerHeight;
+          const circleHeight = circleRef.current.offsetHeight;
+          if (circleHeight >= maxHeight) {
+            return;
           }
+          const scale = Math.pow(scrollPosition * 0.001, 3);
+          circleRef.current.style.transform = `scale(${scale})`;
+          circleRef.current.style.transition = `transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28)`;
+        }
       }
   }, [inView]);
 
@@ -54,7 +55,7 @@ const Contact: React.FC = () => {
   return (
     <section ref={contactRef} className="contactContent">
       <div ref={circleRef} className="circle"></div>
-      <div className="content">
+      <div ref={contentRef} className="content">
         <h1>Contact Us</h1>
       </div>
     </section>

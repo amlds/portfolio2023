@@ -1,8 +1,8 @@
 .contactContent {
-  padding: 50vh 0;
+  position: relative;
 
   .content {
-    z-index: 1;
+    z-index: 999;
     h1{
       color: $background;
     }

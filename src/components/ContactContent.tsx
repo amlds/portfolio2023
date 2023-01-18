@@ -33,20 +33,14 @@ const Contact: React.FC = () => {
 
     return (
         <section className='contactContent'>
-            <div ref={contactRef} className="section-contact">
-                <div ref={circleRef} className="circle"
-                    style={{ transform: transform }}>
-                </div>
-                <div className="content">
-                    <h1>Contact Us</h1>
-                    <form>
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <textarea placeholder="Message"></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
+          <div ref={contactRef} className="section-contact">
+            <div ref={circleRef} className="circle"
+                style={{ transform: transform }}>
             </div>
+            <div className="contactContent_content">
+              <h1>Contact Us</h1>
+            </div>
+          </div>
         </section>
     );
 }

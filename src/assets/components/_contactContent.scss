@@ -1,8 +1,8 @@
 .contactContent {
   position: relative;
+  height: 150vh;
 
-  .content {
-    z-index: 999;
+  &_content {
     h1{
       color: $background;
     }

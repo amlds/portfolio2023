@@ -12,7 +12,7 @@ const SwitchPage: React.FC<Props> = ({ children }) => {
   return (
       <TransitionGroup>
         <CSSTransition  key={location.pathname}
-                        timeout={300}
+                        timeout={3000}
                         classNames="slide">
           <Routes location={location}>{children}</Routes>
         </CSSTransition>

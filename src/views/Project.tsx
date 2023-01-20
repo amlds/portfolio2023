@@ -28,12 +28,13 @@ const Project: React.FC = () => {
         <div>
           <h1>{project.title}</h1>
           <p>{project.description}</p>
-          <img src={project.image} alt={project.title} />
           <div>
             {project.tags.map((tag, index) => (
               <span key={index}>{tag}</span>
-            ))}
+              ))}
           </div>
+
+          <img src={project.image} alt={project.title} />
         </div>
       ) : (
         <p>Projet non trouvé</p>

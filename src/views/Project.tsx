@@ -14,7 +14,6 @@ interface ProjectList {
   [key: string]: Props;
 }
 
-
 const getProjectById = (id: number): Props | undefined => {
   return Object.values(Projects).find((project: Props) => project.id === id);
 };

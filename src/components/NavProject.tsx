@@ -7,8 +7,8 @@ interface Props {
   project: {
     id: number;
     title: string;
-    description: string;
-    image: string;
+    littledescription: string;
+    image: string[];
     tags: string[];
   };
 }
@@ -18,7 +18,7 @@ const NavProject: React.FC<Props> = ({ project }) => {
     <div className="navProject">
       <Link to={`/project/${project.id}`}>
         <div className="navProject__content">
-          <p>{project.description}</p>
+          <p>{project.littledescription}</p>
           <HoverLink infos={
             {
               name: project.title,

@@ -2,36 +2,73 @@
   "project1": {
     "id": 1,
     "title": "Vel-Watt",
-    "description": "Vélo pédagogique",
-    "image": "https://picsum.photos/200/300",
-    "tags": ["React.js", "Node.js", "SCSS", "Figma", "UX/UI design" ]
+    "year": 2022,
+    "littledescription": "Vélo pédagogique",
+    "description": "Vel-Watt semble être un projet innovant qui vise à utiliser les vélos pour produire de l'électricité. Le projet comprend une interface graphique avec un mini-jeu 3D et une application web qui permet de suivre la production d'électricité et de sensibiliser aux valeurs énergétiques.",
+    "image": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "tags": ["React.js", "Node.js", "SCSS", "Figma", "UX/UI design" ],
+    "link": "https://www.velwatt.com",
+    "type": ["computer", "mobile"],
+    "role": ["développeur", "designer"]
   },
   "project2": {
     "id": 2,
     "title": "AM-PROD",
+    "year": 2022,
+    "littledescription": "Portfolio",
     "description": "Generateur de brainstorming",
-    "image": "https://picsum.photos/200/300",
-    "tags": ["React.js", "TypeScript", "SCSS", "UX/UI design"]
+    "image": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "tags": ["React.js", "TypeScript", "SCSS", "UX/UI design"],
+    "link": "https://https://www.alexymartinetprod.com/.com/",
+    "type": ["computer", "mobile"],
+    "role": ["développeur", "designer"]
   },
   "project3": {
-    "id": 3,
-    "title": "Brainstormer3000",
-    "description": "Vélo pédagogique",
-    "image": "https://picsum.photos/200/300",
-    "tags": ["HTML", "CSS", "JS"]
+    "id": 2,
+    "title": "Broadcast3000",
+    "year": 2022,
+    "littledescription": "Affichage dynamique",
+    "description": "Affichage dynamique",
+    "image": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "tags": ["React.js", "TypeScript", "SCSS", "Rest"],
+    "link": "https://vel-watt.com/",
+    "type": ["computer", "mobile"],
+    "role": ["développeur"]
   },
   "project4": {
-    "id": 4,
-    "title": "Compet' en vill'",
+    "id": 3,
+    "title": "Brainstormer3000",
+    "year": 2022,
+    "littledescription": "Generateur de brainstorming",
     "description": "Vélo pédagogique",
-    "image": "https://picsum.photos/200/300",
-    "tags": ["Figma", "UX/UI design"]
+    "image": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "tags": ["HTML", "CSS", "JS"],
+    "link": "https://amlds.github.io/brainstorm3000/",
+    "type": ["computer"],
+    "role": ["développeur"]
   },
   "project5": {
+    "id": 4,
+    "title": "Compet' en vill'",
+    "year": 2022,
+    "littledescription": "Réseau social pour les compétitions sportives",
+    "description": "Vélo pédagogique",
+    "image": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "tags": ["Figma", "UX/UI design"],
+    "link": "https://www.competenvill.com/",
+    "type": ["mobile"],
+    "role": ["designer"]
+  },
+  "project6": {
     "id": 5,
     "title": "Cabinet Rostaing",
+    "year": 2022,
+    "littledescription": "Actualité de comptabilité",
     "description": "Vélo pédagogique",
-    "image": "https://picsum.photos/200/300",
-    "tags": ["Figma", "UX/UI design", "BravoStudio"]
+    "image": ["https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/200/300"],
+    "tags": ["Figma", "UX/UI design", "BravoStudio"],
+    "link": "https://vel-watt.com/",
+    "type": ["mobile"],
+    "role": ["développeur", "designer"]
   }
 }

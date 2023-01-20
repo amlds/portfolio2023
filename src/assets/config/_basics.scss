@@ -4,7 +4,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 96vh;
   width: min(100% - 1em, 95em);
   margin: 0 auto;
 }
@@ -41,7 +41,7 @@ h4 {
 
 p {
   font-family: "Satoshi";
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -62,4 +62,22 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.align {
+  display: flex;
+  &_row {
+    gap: 4rem;
+    flex-direction: row;
+  }
+  &_column {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+
+.return_btn {
+  .arrow {
+    transform: rotate(225deg);
+  }
 }

@@ -1,26 +1,28 @@
+import React from "react";
+/* import { Link } from "react-router-dom"; */
 import HoverLink from "./HoverLink";
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <header>
-        <HoverLink infos={
-          {
-            name: "À propos",
-            font: ["1.5rem", "Satoshi"]
-          }
-        }/>
+      {/* <Link to="/project"> */}
         <HoverLink infos={
           {
             name: "Projets",
             font: ["1.5rem", "Satoshi"]
           }
         }/>
+      {/* </Link> */}
+      {/* <Link to="/about"> */}
         <HoverLink infos={
           {
-            name: "Contact",
+            name: "À propos",
             font: ["1.5rem", "Satoshi"]
           }
         }/>
+      {/* </Link> */}
     </header>
   );
 }
+
+export default Header;

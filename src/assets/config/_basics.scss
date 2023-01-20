@@ -75,3 +75,9 @@ a {
     flex-direction: column;
   }
 }
+
+.return_btn {
+  .arrow {
+    transform: rotate(225deg);
+  }
+}

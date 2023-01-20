@@ -31,9 +31,9 @@ const Project: React.FC = () => {
 
   return (
     <section className='projectPages'>
-      <Link to={`/`}>Retour</Link>
       {project ? (
-        <div>
+        <div className='projectPages_content'>
+          <Link to={`/`} className="return_btn">Retour</Link>
           <div className='projectPages_header'>
             <div className='projectPages_header_text'>
               <h1>{project.title}</h1>
@@ -61,8 +61,16 @@ const Project: React.FC = () => {
             </div>
             <img className="projectPages_header_img" src={project.image[0]} alt={"image 1 de " + project.title} />
           </div>
-          <img src={project.image[1]} alt={"image 2 de " + project.title} />
-          <img src={project.image[2]} alt={"image 3 de " + project.title} />
+          <img className="projectPages_img" src={project.image[1]} alt={"image 2 de " + project.title} />
+          <img className="projectPages_img" src={project.image[2]} alt={"image 3 de " + project.title} />
+          <div className='changeProject'>
+            <Link to={`/project/${project.id - 1}`} className='changeProject__prev'>
+              <Arrow /> Previous project
+            </Link>
+            <Link to={`/project/${project.id + 1}`} className='changeProject__next'>
+              Next project <Arrow />
+            </Link>
+          </div>
         </div>
       ) : (
         <p className='projectNotCharged'>Projet non trouvé</p>

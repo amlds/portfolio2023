@@ -1,4 +1,10 @@
 .projectPages {
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
   &_header {
     display: flex;
     justify-content: space-between;
@@ -65,7 +71,39 @@
         object-fit: cover;
       }
     }
+    display: flex;
+  }
+  &_img {
+    width: 100%;
+    height: 720px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .changeProject{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
 
+    &__prev {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      .arrow {
+        transform: rotate(225deg);
+      }
+    }
+    &__next {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      .arrow {
+        transform: rotate(45deg);
+      }
+    }
   }
 }
 

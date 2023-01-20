@@ -5,16 +5,6 @@ import Logo from "../components/Logo";
 
 import Projects from '../data/dataProject.json';
 
-/* interface Props {
-  project: {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    tags: string[];
-  };
-} */
-
 const ProjectContent: React.FC = () => {
   return (
     <section>

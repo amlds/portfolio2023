@@ -1,13 +1,20 @@
 import { useParams, Link } from 'react-router-dom';
 
+import Arrow from '../components/svg/Arrow';
+
 const Projects: ProjectList = require('../data/dataProject.json');
 
 interface Props {
   id: number;
   title: string;
+  year: number;
   description: string;
-  image: string;
+  littledescription: string;
+  image: string[];
   tags: string[];
+  link: string;
+  type: string[];
+  role: string[];
 }
 
 interface ProjectList {
@@ -23,24 +30,44 @@ const Project: React.FC = () => {
   const project = getProjectById(Number(id));
 
   return (
-    <div>
+    <section className='projectPages'>
+      <Link to={`/`}>Retour</Link>
       {project ? (
         <div>
-          <h1>{project.title}</h1>
-          <p>{project.description}</p>
-          <div>
-            {project.tags.map((tag, index) => (
-              <span key={index}>{tag}</span>
-              ))}
-          </div>
+          <div className='projectPages_header'>
+            <div className='projectPages_header_text'>
+              <h1>{project.title}</h1>
+              <p>{project.littledescription}</p>
+              <p>{project.description}</p>
+              <div className='tags'>
+                {project.tags.map((tag, index) => (
+                  <p className="tag md-1" key={index}>{tag}</p>
+                ))}
+              </div>
+              <Link to={{ pathname: project.link}} target={"_blank"} className="link"><p>Link to website</p> <Arrow /></Link>
 
-          <img src={project.image} alt={project.title} />
+              <div className='align align_row'>
+                <div className='align align_column'>
+                  <p>year</p>
+                  <p className='md-1'>{project.year}</p>
+                </div>
+                <div className='align align_column'>
+                  <p>Rôle</p>
+                  {project.role.map((role, index) => (
+                    <p className="md-1" key={index}>{role}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <img className="projectPages_header_img" src={project.image[0]} alt={"image 1 de " + project.title} />
+          </div>
+          <img src={project.image[1]} alt={"image 2 de " + project.title} />
+          <img src={project.image[2]} alt={"image 3 de " + project.title} />
         </div>
       ) : (
-        <p>Projet non trouvé</p>
+        <p className='projectNotCharged'>Projet non trouvé</p>
       )}
-      <Link to={`/`}>Retour</Link>
-    </div>
+    </section>
   );
 };
 

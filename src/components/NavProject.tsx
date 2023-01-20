@@ -8,7 +8,7 @@ interface Props {
     id: number;
     title: string;
     littledescription: string;
-    image: string;
+    image: string[];
     tags: string[];
   };
 }

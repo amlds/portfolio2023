@@ -25,6 +25,24 @@ const getProjectById = (id: number): Props | undefined => {
   return Object.values(Projects).find((project: Props) => project.id === id);
 };
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
+const getNextProjectId = (currentId: number): number => {
+  const currentIndex = Object.values(Projects).findIndex((project: Props) => project.id === currentId);
+  return currentIndex === Object.values(Projects).length - 1 ? 1 : currentId + 1;
+};
+
+const getPreviousProjectId = (currentId: number): number => {
+  const currentIndex = Object.values(Projects).findIndex((project: Props) => project.id === currentId);
+  return currentIndex === 0 ? Object.values(Projects).length : currentId - 1;
+};
+
+
 const Project: React.FC = () => {
   const { id } = useParams<{id: string}>();
   const project = getProjectById(Number(id));
@@ -64,10 +82,15 @@ const Project: React.FC = () => {
           <img className="projectPages_img" src={project.image[1]} alt={"image 2 de " + project.title} />
           <img className="projectPages_img" src={project.image[2]} alt={"image 3 de " + project.title} />
           <div className='changeProject'>
-            <Link to={`/project/${project.id - 1}`} className='changeProject__prev'>
+            <Link to={`/project/${getPreviousProjectId(project.id)}`}
+                  className='changeProject__prev'
+                  onClick={scrollToTop}>
               <Arrow /> Previous project
             </Link>
-            <Link to={`/project/${project.id + 1}`} className='changeProject__next'>
+
+            <Link to={`/project/${getNextProjectId(project.id)}`}
+                  className='changeProject__next'
+                  onClick={scrollToTop}>
               Next project <Arrow />
             </Link>
           </div>

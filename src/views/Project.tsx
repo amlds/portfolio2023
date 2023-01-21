@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 import Arrow from '../components/svg/Arrow';
@@ -41,7 +42,6 @@ const getPreviousProjectId = (currentId: number): number => {
   const currentIndex = Object.values(Projects).findIndex((project: Props) => project.id === currentId);
   return currentIndex === 0 ? Object.values(Projects).length : currentId - 1;
 };
-
 
 const Project: React.FC = () => {
   const { id } = useParams<{id: string}>();

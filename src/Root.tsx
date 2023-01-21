@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 
 import Home from './views/Home';
+import About from './views/About';
 import Project from './views/Project';
 import PageNotFound from './views/pageNotFound';
 
@@ -13,6 +14,7 @@ const Root: React.FC = () => {
     <BrowserRouter>
       <SwitchPages>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/project/:id" element={<Project />} />
         <Route element={<PageNotFound />} />
       </SwitchPages>

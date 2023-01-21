@@ -1,6 +1,8 @@
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 import Arrow from '../components/svg/Arrow';
+import Header from '../components/Header';
 
 const Projects: ProjectList = require('../data/dataProject.json');
 
@@ -42,13 +44,13 @@ const getPreviousProjectId = (currentId: number): number => {
   return currentIndex === 0 ? Object.values(Projects).length : currentId - 1;
 };
 
-
 const Project: React.FC = () => {
   const { id } = useParams<{id: string}>();
   const project = getProjectById(Number(id));
 
   return (
     <section className='projectPages'>
+      <Header />
       {project ? (
         <div className='projectPages_content'>
           <Link to={`/`} className="return_btn">Retour</Link>

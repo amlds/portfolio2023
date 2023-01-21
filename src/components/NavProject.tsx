@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 
 import HoverLink from "./HoverLink";
@@ -13,10 +13,20 @@ interface Props {
   };
 }
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
 const NavProject: React.FC<Props> = ({ project }) => {
+  const projectsRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className="navProject">
-      <Link to={`/project/${project.id}`}>
+    <div className="navProject" ref={projectsRef}>
+      <Link to={`/project/${project.id}`}
+            onClick={scrollToTop}>
         <div className="navProject__content">
           <p>{project.littledescription}</p>
           <HoverLink infos={

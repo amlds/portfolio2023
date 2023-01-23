@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import HoverLink from "./HoverLink";
 import Logo from "./svg/Logo";
+import ButtonTheme from './ButtonTheme';
+
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -57,6 +59,7 @@ const Header: React.FC = () => {
             }
           }/>
         </Link>
+        <ButtonTheme />
       </nav>
     </header>
   );

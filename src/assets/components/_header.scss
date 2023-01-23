@@ -7,10 +7,11 @@ header {
   left: 50%;
   transform: translate(-50%, 0);
   padding: 1.5rem 0;
-  background-color: $background;
-  border-bottom: $text-color 2px solid;
+  background-color:var(--background);
+  border-bottom: var(--text-color) 2px solid;
 
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out 0.5s;
+  transition: opacity 0.5s ease-in-out 0.5s;
 
 
   &::after{
@@ -20,8 +21,8 @@ header {
     left: 100%;
     width: 100%;
     height: 100%;
-    background-color: $background;
-    border-bottom: $text-color 2px solid;
+    background-color:var(--background);
+    border-bottom: var(--text-color) 2px solid;
   }
   &::before{
     content: "";
@@ -30,8 +31,8 @@ header {
     right: 100%;
     width: 100%;
     height: 100%;
-    background-color: $background;
-    border-bottom: $text-color 2px solid;
+    background-color:var(--background);
+    border-bottom: var(--text-color) 2px solid;
   }
 
   nav {

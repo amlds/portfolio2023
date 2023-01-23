@@ -12,7 +12,7 @@
  */
 
 .circle{
-  background-color: $text-color;
+  background-color: var(--text-color);
   border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
   width: 1px;
   height: 1px;

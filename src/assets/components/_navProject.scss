@@ -1,7 +1,7 @@
 .navProject {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid $text-color;
+  border-bottom: 2px solid var(--text-color);
 
   &__content{
     display: flex;

@@ -11,7 +11,7 @@
   .AnimRectangle {
     width: 20%;
     height: 100%;
-    background-color: $text-color;
+    background-color: var(--text-color);
     border: 2px solid black;
 
     &:nth-child(1) {
@@ -32,7 +32,7 @@
   }
 }
 
-.page-content {
+.²age-content {
   position: absolute;
   top: 0;
   left: 0;

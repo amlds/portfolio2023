@@ -6,12 +6,15 @@ import About from './views/About';
 import Project from './views/Project';
 import PageNotFound from './views/pageNotFound';
 
+import Header from './components/Header';
 
 import SwitchPages from './components/SwitchPage';
+
 
 const Root: React.FC = () => {
   return (
     <BrowserRouter>
+      <Header />
       <SwitchPages>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

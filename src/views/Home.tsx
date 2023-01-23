@@ -2,7 +2,6 @@ import React from "react";
 import Banner from "../components/Banner";
 
 /* import Chargement from "../components/Chargement"; */
-import Header from "../components/Header";
 import Decoration from "../components/Decoration";
 import ProjectContent from "../components/ProjectContent";
 import TestScroll from "../components/TestScroll"
@@ -13,10 +12,10 @@ const Home: React.FC<Props> = (props) => {
   return (
     <main>
       <div className="home">
-        <Header />
         <Decoration />
-        <Banner message="PROJECT" />
+        <Banner message="DEVELOPPEUR" />
         <ProjectContent />
+        <Banner message="DESIGNER" />
         <TestScroll />
       </div>
     </main>

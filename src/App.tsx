@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Root from './Root';
-/* import Cursor from './components/cursor'; */
-/* import Header from './components/Header'; */
+import classnames from 'classnames';
 
-function App() {
+
+const App: React.FC = () => {
+  const [theme] = useState<'light' | 'dark'>('light');
+  const classes = classnames('root', {
+    'light-theme': theme === 'light',
+    'dark-theme': theme === 'dark',
+  });
+
   return (
-    <>
+    <main className={classes}>
       <Root />
-      {/* <Header /> */}
-      {/* <Cursor /> */}
-    </>
+    </main>
   );
 }
 

@@ -1,4 +1,12 @@
-//dark théme:
-$background: #FFFEFB;
-$backgroundOpacity: rgba(12, 12, 12, 0.8);
-$text-color: #363232;
+:root {
+  .light-theme {
+    --background: #FFFEFB;
+    --backgroundOpacity: rgba(12, 12, 12, 0.8);
+    --text-color: #363232;
+  }
+  .dark-theme {
+    --background: #363232;
+    --backgroundOpacity: rgba(12, 12, 12, 0.8);
+    --text-color: #FFFEFB;
+  }
+}

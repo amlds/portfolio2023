@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import HoverLink from "./HoverLink";
 import Logo from "./svg/Logo";
+import ButtonTheme from './ButtonTheme';
+
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -10,7 +12,11 @@ const scrollToTop = () => {
   });
 }
 
-const Header: React.FC = () => {
+interface ButtonThemeProps {
+  setTheme: (newTheme: 'light' | 'dark') => void
+}
+
+const Header: React.FC<ButtonThemeProps> = ({setTheme}) => {
   const [lastScrollDirection, setLastScrollDirection] = useState<'up' | 'down'>('up');
   const [isHeaderHidden, setIsHeaderHidden] = useState(false);
 
@@ -57,6 +63,7 @@ const Header: React.FC = () => {
             }
           }/>
         </Link>
+        <ButtonTheme setTheme={setTheme} />
       </nav>
     </header>
   );

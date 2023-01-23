@@ -6,12 +6,18 @@ import About from './views/About';
 import Project from './views/Project';
 import PageNotFound from './views/pageNotFound';
 
+import Header from './components/Header';
 
 import SwitchPages from './components/SwitchPage';
 
-const Root: React.FC = () => {
+interface ButtonThemeProps {
+  setTheme: (newTheme: 'light' | 'dark') => void
+}
+
+const Root: React.FC<ButtonThemeProps> = ({setTheme}) => {
   return (
     <BrowserRouter>
+      <Header setTheme={setTheme}/>
       <SwitchPages>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

@@ -5,6 +5,7 @@
     gap: 4rem;
   }
 
+
   &_header {
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,7 @@
             height: 2px;
             bottom: 10px;
             left: 0;
-            background-color: $text-color;
+            background-color: var(--text-color);
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
           }

@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 import Arrow from '../components/svg/Arrow';
-import Header from '../components/Header';
 
 const Projects: ProjectList = require('../data/dataProject.json');
 
@@ -50,7 +49,6 @@ const Project: React.FC = () => {
 
   return (
     <section className='projectPages'>
-      <Header />
       {project ? (
         <div className='projectPages_content'>
           <Link to={`/`} className="return_btn">Retour</Link>

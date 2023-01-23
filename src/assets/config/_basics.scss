@@ -1,8 +1,12 @@
-body {
+body{
   margin-inline: auto;
   overflow-x: hidden;
-  background-color: $background;
+}
+
+main {
+  background-color: var(--background);
   margin: 0;
+  transition: all 0.5s ease;
 }
 
 section {
@@ -13,7 +17,7 @@ section {
 
 h1, h2, h3, h4, p {
   margin: 0;
-  color: $text-color;
+  color: var(--text-color);
   line-height: 150%;
   font-style: normal;
 }
@@ -48,7 +52,7 @@ p {
 }
 
 a {
-  color: $text-color;
+  color: var(--text-color);
   text-decoration: none;
   font-family: "Satoshi";
   font-size: 1rem;

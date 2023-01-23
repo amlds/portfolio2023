@@ -2,7 +2,7 @@ span {
   font-family: var(--u);
   font-size: var(--f);
   opacity: 1;
-  color: $text-color;
+  color: --text-color;
 }
 
 .hoverLink {

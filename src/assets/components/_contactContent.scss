@@ -4,29 +4,7 @@
   .content {
     z-index: 1;
     h1{
-      color: $background;
+      color: var(--background);
     }
   }
-
-/*   &__text {
-    p {
-      color: $background;
-    }
-  }
-
-  &__link {
-    display: flex;
-    gap: 24px;
-    .button {
-      color: $background;
-      border-color: $background;
-    }
-  }
-
-  .banner p {
-    color: $background;
-  }
-  .banner, .banner div {
-    border-color: $background;
-  } */
 }

@@ -1,12 +1,13 @@
 body{
-  margin-inline: auto;
+  margin: 0;
   overflow-x: hidden;
 }
 
 main {
+  margin-inline: auto;
   background-color: var(--background);
   margin: 0;
-  transition: all 0.5s ease .2s;
+  transition: all 0.5s ease;
 }
 
 section {

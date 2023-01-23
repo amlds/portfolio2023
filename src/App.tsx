@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme] = useState<'light' | 'dark'>('light');
   const classes = classnames('root', {
     'light-theme': theme === 'light',
     'dark-theme': theme === 'dark',
@@ -12,7 +12,7 @@ const App: React.FC = () => {
 
   return (
     <main className={classes}>
-      <Root setTheme={setTheme}/>
+      <Root />
     </main>
   );
 }

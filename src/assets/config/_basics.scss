@@ -6,7 +6,7 @@ body{
 main {
   background-color: var(--background);
   margin: 0;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease .2s;
 }
 
 section {

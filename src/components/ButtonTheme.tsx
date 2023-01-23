@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 
-interface ButtonThemeProps {
-  setTheme: (newTheme: 'light' | 'dark') => void
-}
-
-const ButtonTheme: React.FC<ButtonThemeProps> = ({setTheme}) => {
+const ButtonTheme: React.FC = () => {
   const [theme, setCurrentTheme] = useState<'light' | 'dark'>('light');
+
+  const main = document.querySelector('main');
+
+  if (main) {
+    main.classList.remove('light-theme');
+    main.classList.remove('dark-theme');
+    main.classList.add(`${theme}-theme`);
+  }
 
   return (
     <div>
@@ -15,4 +19,6 @@ const ButtonTheme: React.FC<ButtonThemeProps> = ({setTheme}) => {
     </div>
   );
 };
+
+
 export default ButtonTheme;

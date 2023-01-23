@@ -10,14 +10,11 @@ import Header from './components/Header';
 
 import SwitchPages from './components/SwitchPage';
 
-interface ButtonThemeProps {
-  setTheme: (newTheme: 'light' | 'dark') => void
-}
 
-const Root: React.FC<ButtonThemeProps> = ({setTheme}) => {
+const Root: React.FC = () => {
   return (
     <BrowserRouter>
-      <Header setTheme={setTheme}/>
+      <Header />
       <SwitchPages>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

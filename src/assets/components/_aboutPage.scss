@@ -1,0 +1,48 @@
+.aboutPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  overflow-y: hidden;
+  .decoration {
+    padding: 10rem 0 0 0;
+    z-index: 99;
+    mix-blend-mode: exclusion;
+    div {
+      .rectangle {
+        border-color: var(--background);
+      }
+      h1 {
+        color: var(--background);
+      }
+
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &--text {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      width: 50%;
+      h3 {
+        width: 10rem;
+      }
+      .about--row {
+        display: flex;
+        gap: 3rem;
+      }
+    }
+
+  }
+  .about__img {
+    position: absolute;
+    right: 0;
+    top: 10rem;
+    z-index: 1;
+
+  }
+}

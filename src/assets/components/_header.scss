@@ -9,10 +9,9 @@ header {
   padding: 1.5rem 0;
   background-color:var(--background);
   border-bottom: var(--text-color) 2px solid;
+  opacity: 1;
 
-  transition: transform 0.5s ease-in-out 0.5s;
-  transition: opacity 0.5s ease-in-out 0.5s;
-
+  transition: transform .5s ease-in-out .5s, opacity .5s ease-in-out .5s;
 
   &::after{
     content: "";
@@ -43,7 +42,6 @@ header {
 }
 
 .header--hidden {
-  /* transform: translateY(-100px); */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
   opacity: 0;
 }

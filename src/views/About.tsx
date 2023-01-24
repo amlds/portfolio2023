@@ -34,16 +34,16 @@ const About: React.FC = () => {
           <div className="about--row">
             <h3>Contact</h3>
             <div>
-              <p>Twitter : @amlds_ma</p>
-              <p>Instagram : @amlds</p>
-              <p>Github : @amlds</p>
-              <p>Linkedin : @Alexy Martinet</p>
-              <p>Mail : am.production.dev@gmail.com</p>
+              <p>Twitter : <a className="linkAbout" href="https://twitter.com/amlds_ma" target="_blank" rel="noreferrer">@amlds_ma</a></p>
+              {/*<p>Instagram : <a className="linkAbout" href="https://www.instagram.com/amlds/" target="_blank" rel="noreferrer">@amlds</a></p>*/}
+              <p>Github : <a className="linkAbout" href="https://github.com/amlds" target="_blank" rel="noreferrer">@amlds</a></p>
+              <p>Linkedin : <a className="linkAbout" href="https://www.linkedin.com/in/alexy-martinet-9a6580168/" target="_blank" rel="noreferrer">@Alexy Martinet</a></p>
+              <p>Mail : <a className="linkAbout" href="mailto:am.production.dev@gmail.com">am.production.dev@gmail.com</a></p>
             </div>
           </div>
         </div>
       </div>
-      <img className="about__img" src="https://picsum.photos/720/900" alt="img" />
+      <img className="about__img" src="./images/moi.jpg" alt="img" />
     </section>
   );
 }

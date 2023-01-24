@@ -1,8 +1,115 @@
 .button {
-  border: 1px solid #BE252E;
+  border: 1px solid var(--background);
   border-radius: 100px;
   padding: 16px 124px;
 
   font-family: "Satoshi-Medium";
   font-size: 1.25rem;
+}
+
+
+.return_btn {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--background);
+  font-family: "Satoshi-Medium";
+  font-size: 1.25rem;
+  p {
+    padding-right: 50%;
+
+  }
+  .arrow {
+    left: 100%;
+    opacity: 0;
+    transition: transform 0.3s ease;
+  }
+  &:hover {
+    .arrow {
+      opacity: 1;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+
+.buttonTheme_toggle {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 40px;
+}
+
+input[type="checkbox"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+
+#_1st-toggle-btn span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: var(--background);
+  border: 2px solid var(--text-color);
+  border-radius: 40px;
+  transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+
+#_1st-toggle-btn span:before,
+#_1st-toggle-btn span:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+#_1st-toggle-btn span:before {
+  background-color: var(--background);
+  transform: translate(-58px, 0px);
+  z-index: 1;
+}
+
+#_1st-toggle-btn span:after {
+  background-color: var(--text-color);
+  transform: translate(3px, 0px);
+  z-index: 0;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span {
+  background-color: var(--background);
+  border: 2px solid var(--text-color);
+}
+
+#_1st-toggle-btn input[type="checkbox"]:active + span {
+  opacity: 0.5;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:before {
+  background-color: var(--background);
+  transform: translate(45px, -10px);
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+  background-color: var(--text-color);
+  transform: translate(55px, 0px);
 }

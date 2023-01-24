@@ -38,7 +38,7 @@ const Header: React.FC = () => {
   }, [lastScrollDirection]);
 
   return (
-    <header className={`header ${isHeaderHidden ? "header--hidden" : ""}`}>
+    <header /* className={`header ${isHeaderHidden ? "header--hidden" : ""}`} */>
       <div>
         <Logo />
       </div>

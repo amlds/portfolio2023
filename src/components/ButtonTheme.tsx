@@ -1,25 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ButtonToggle: React.FC = () => {
-  const [checked, setChecked] = React.useState(false);
-  const [currentTheme, setCurrentTheme] = React.useState<'light' | 'dark'>('light');
+  const [checked, setChecked] = useState(false);
+  const [theme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 
-  React.useEffect(() => {
+  useEffect(() => {
     const main = document.querySelector('main');
     if (main) {
       main.classList.remove('light-theme');
       main.classList.remove('dark-theme');
-      main.classList.add(`${currentTheme}-theme`);
+      main.classList.add(`${theme}-theme`);
     }
-  }, [currentTheme]);
+  }, [theme]);
+
+  useEffect(() => {
+    const handleDarkModeChange = (darkModes: MediaQueryListEvent) => {
+      if (darkModes.matches) {
+        setCurrentTheme('dark');
+        setChecked(true);
+      } else {
+        setCurrentTheme('light');
+        setChecked(false);
+      }
+    };
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeQuery.addEventListener('change', handleDarkModeChange);
+    if (darkModeQuery.matches) {
+      setCurrentTheme('dark');
+      setChecked(true);
+    } else {
+      setCurrentTheme('light');
+      setChecked(false);
+    }
+    return () => {
+      darkModeQuery.removeEventListener('change', handleDarkModeChange);
+    };
+  }, []);
 
   return (
     <label className="buttonTheme_toggle" id="_1st-toggle-btn">
-      <input type="checkbox"
-        defaultChecked={checked}
+      <input
+        type="checkbox"
+        checked={checked}
         onChange={() => {
-          setChecked(!checked)
-          setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light');
+          setChecked(!checked);
+          setCurrentTheme(theme === 'light' ? 'dark' : 'light');
         }}
       />
       <span></span>

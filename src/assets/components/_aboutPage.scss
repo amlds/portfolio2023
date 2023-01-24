@@ -3,17 +3,18 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  overflow-y: hidden;
+  height: 100%;
+  padding: 0 0 2.5rem;
   .decoration {
     padding: 10rem 0 0 0;
     z-index: 99;
     mix-blend-mode: exclusion;
     div {
       .rectangle {
-        border-color: var(--background);
+        border-color: #FFFEFB;
       }
       h1 {
-        color: var(--background);
+        color: #FFFEFB;
       }
 
     }
@@ -28,12 +29,16 @@
       gap: 2rem;
 
       width: 50%;
+
       h3 {
         width: 10rem;
+        line-height: 100%;
       }
       .about--row {
         display: flex;
+        align-items: flex-start;
         gap: 3rem;
+
       }
     }
 
@@ -41,8 +46,10 @@
   .about__img {
     position: absolute;
     right: 0;
-    top: 10rem;
+    top: 8rem;
     z-index: 1;
-
+    width: 50%;
+    height: 85%;
+    object-fit: cover;
   }
 }

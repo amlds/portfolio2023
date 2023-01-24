@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HoverLink from "./HoverLink";
 import Logo from "./svg/Logo";
 import ButtonTheme from './ButtonTheme';
+import ButtonToggle from './ButtonToggle';
 
 
 const scrollToTop = () => {
@@ -38,7 +39,7 @@ const Header: React.FC = () => {
   }, [lastScrollDirection]);
 
   return (
-    <header className={`header ${isHeaderHidden ? "header--hidden" : ""}`}>
+    <header /* className={`header ${isHeaderHidden ? "header--hidden" : ""}`} */>
       <div>
         <Logo />
       </div>
@@ -60,6 +61,7 @@ const Header: React.FC = () => {
           }/>
         </Link>
         <ButtonTheme />
+        <ButtonToggle />
       </nav>
     </header>
   );

@@ -51,9 +51,9 @@ const Project: React.FC = () => {
     <section className='projectPages'>
       {project ? (
         <div className='projectPages_content'>
-          <Link to={`/`} className="return_btn">Retour</Link>
           <div className='projectPages_header'>
             <div className='projectPages_header_text'>
+              <Link to={`/`} className="return_btn"><Arrow /> <p>Retour</p></Link>
               <h1>{project.title}</h1>
               <p>{project.littledescription}</p>
               <p>{project.description}</p>

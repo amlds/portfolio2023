@@ -4,7 +4,7 @@
     "title": "Vel-Watt",
     "year": 2022,
     "littledescription": "Vélo pédagogique",
-    "description": "Vel-Watt semble être un projet innovant qui vise à utiliser les vélos pour produire de l'électricité. Le projet comprend une interface graphique avec un mini-jeu 3D et une application web qui permet de suivre la production d'électricité et de sensibiliser aux valeurs énergétiques.",
+    "description": "Vel-Watt est un projet innovant qui vise à utiliser les vélos pour produire de l'électricité. Le projet comprend une interface graphique avec un mini-jeu 3D et une application web qui permet de suivre la production d'électricité et de sensibiliser aux valeurs énergétiques.",
     "image": ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080"],
     "tags": ["React.js", "Node.js", "SCSS", "Figma", "UX/UI design" ],
     "link": "https://www.velwatt.com",

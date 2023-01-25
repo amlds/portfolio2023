@@ -2,16 +2,10 @@ import React from "react";
 
 import Projects from "../data/dataProject.json";
 
+import NavDesign from "./NavDesign";
+
 interface Props {
   id: number;
-  title: string;
-  year: number;
-  description: string;
-  littledescription: string;
-  image: string[];
-  tags: string[];
-  link: string;
-  type: string[];
   role: string[];
 }
 
@@ -29,7 +23,7 @@ const DesignProject: React.FC = () => {
     <section className="DesignProject">
       <div className="Designproject_nav">
         {Object.values(allDesignProject).map((project) => (
-          <p>{project.title}</p>
+          <NavDesign key={project.id} project={project} />
         ))}
       </div>
     </section>

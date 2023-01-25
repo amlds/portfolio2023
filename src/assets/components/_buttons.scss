@@ -37,8 +37,8 @@
 
 .buttonTheme_toggle {
   position: relative;
-  width: 100px;
-  height: 100%;
+  width: 80px;
+  height: 80%;
   margin: 0 auto;
   border-radius: 40px;
 }
@@ -77,8 +77,8 @@ input[type="checkbox"] {
   content: "";
   position: absolute;
   top: 3px;
-  width: 36px;
-  height: 36px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   transition: 0.5s ease transform, 0.2s ease background-color;
 }
@@ -106,10 +106,10 @@ input[type="checkbox"] {
 
 #_1st-toggle-btn input[type="checkbox"]:checked + span:before {
   background-color: var(--background);
-  transform: translate(45px, -10px);
+  transform: translate(36px, -5px);
 }
 
 #_1st-toggle-btn input[type="checkbox"]:checked + span:after {
   background-color: var(--text-color);
-  transform: translate(55px, 0px);
+  transform: translate(45px, 0px);
 }

@@ -3,6 +3,7 @@ span {
   font-size: var(--f);
   opacity: 1;
   color: var(--text-color);
+  transition: color 0.4s cubic-bezier(.23,1,.32,1) calc(.05s * (var(--t) - var(--i)) + .2s);
 }
 
 .hoverLink {

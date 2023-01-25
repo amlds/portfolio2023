@@ -39,9 +39,9 @@ const Header: React.FC = () => {
 
   return (
     <header className={`header ${isHeaderHidden ? "header--hidden" : ""}`}>
-      <div>
+      <Link to="/" onClick={scrollToTop}>
         <Logo />
-      </div>
+      </Link>
       <nav>
         <Link to="/" onClick={scrollToTop}>
           <HoverLink infos={

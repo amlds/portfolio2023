@@ -87,3 +87,33 @@ a {
     transform: rotate(225deg);
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+  section {
+    min-height: 90vh;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  .md-1 {
+    font-size: 1rem;
+  }
+  .align {
+    &_row {
+      gap: 3rem;
+    }
+  }
+}

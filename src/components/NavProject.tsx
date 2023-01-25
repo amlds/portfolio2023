@@ -28,7 +28,7 @@ const NavProject: React.FC<Props> = ({ project }) => {
       <Link to={`/project/${project.id}`}
             onClick={scrollToTop}>
         <div className="navProject__content">
-          <p>{project.littledescription}</p>
+          <p className="littleDescription">{project.littledescription}</p>
           <HoverLink infos={
             {
               name: project.title,

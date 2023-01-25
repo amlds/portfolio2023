@@ -1,3 +1,7 @@
+html {
+  background-color: var(--background);
+}
+
 body{
   margin: 0;
   overflow-x: hidden;
@@ -90,6 +94,9 @@ a {
 
 
 @media only screen and (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
   section {
     min-height: 90vh;
   }

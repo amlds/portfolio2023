@@ -16,9 +16,11 @@ class Decoration extends React.Component {
           <h1>PRODUCTION</h1>
         </div>
         <div className="footerDecoration">
-          <p>Front-End Développeur</p>
           <div>
+            <p>Front-End Développeur</p>
             <p>Designer UX/UI</p>
+          </div>
+          <div>
             <p>Freelance</p>
             <p>@2023 V1.0</p>
           </div>

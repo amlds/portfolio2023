@@ -1,12 +1,14 @@
 .Designproject_nav {
   display: flex;
   flex-direction: column;
+  min-height: fit-content;
 }
 
 .navDesign {
   border-bottom: 2px solid var(--text-color);
   position: relative;
   z-index: 999;
+
 
   &::after{
     content: "";
@@ -64,11 +66,32 @@
         color: var(--background);
       }
       .h{
-        -webkit-text-stroke: 1px var(--text-color);
         opacity: 1;
       }
 
     }
 
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .DesignProject{
+    min-height: fit-content;
+  }
+  .navDesign {
+    a {
+      height: 50px;
+      .navDesign__content {
+        gap: 1rem;
+        .h {
+          --webkit-text-stroke: 1px var(--background);
+          font-size: 1.25rem;
+        }
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }

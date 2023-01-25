@@ -1,5 +1,5 @@
 header {
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -14,6 +14,7 @@ header {
   transition: transform .5s ease-in-out .5s, opacity .5s ease-in-out .5s;
 
   &::after{
+    z-index: 9999;
     content: "";
     position: absolute;
     top: 0;
@@ -24,6 +25,7 @@ header {
     border-bottom: var(--text-color) 2px solid;
   }
   &::before{
+    z-index: 9999;
     content: "";
     position: absolute;
     top: 0;

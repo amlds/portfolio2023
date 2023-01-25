@@ -15,10 +15,17 @@
     gap: 1rem;
     margin: 1rem 0;
   }
+  .h {
+    -webkit-text-stroke: 1px var(--text-color);
+  }
 
   &:hover{
+    span {
+      color: var(--background);
+    }
     .h{
-      opacity: 0.3;
+      -webkit-text-stroke: 1px var(--text-color);
+      opacity: 1;
     }
   }
 }

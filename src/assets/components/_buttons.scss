@@ -113,3 +113,36 @@ input[type="checkbox"] {
   background-color: var(--text-color);
   transform: translate(45px, 0px);
 }
+
+
+@media only screen and (max-width: 600px) {
+  .button {
+    padding: 16px 64px;
+  }
+  .return_btn {
+    p {
+      padding-right: 0;
+    }
+  }
+
+  .buttonTheme_toggle {
+    width: 60px;
+  }
+
+
+  #_1st-toggle-btn span:before,
+  #_1st-toggle-btn span:after {
+  content: "";
+  top: 3px;
+  width: 19px;
+  height: 19px;
+  }
+  #_1st-toggle-btn input[type="checkbox"]:checked + span:before {
+    background-color: var(--background);
+    transform: translate(26px, -5px);
+  }
+  #_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+    background-color: var(--text-color);
+    transform: translate(33px, 0px);
+  }
+}

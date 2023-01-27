@@ -31,7 +31,7 @@
     "description": "Affichage dynamique",
     "image": ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080"],
     "tags": ["React", "TypeScript", "SCSS", "Rest"],
-    "link": "https://vel-watt.com/",
+    "link": "",
     "type": ["computer", "mobile"],
     "role": ["développeur"]
   },
@@ -67,7 +67,7 @@
     "description": "Actualité sur la comptabilité",
     "image": ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080"],
     "tags": ["Figma", "UX/UI design", "BravoStudio"],
-    "link": "https://vel-watt.com/",
+    "link": "",
     "type": ["mobile"],
     "role": ["développeur", "designer"]
   }

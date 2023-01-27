@@ -43,6 +43,14 @@ const getPreviousProjectId = (currentId: number): number => {
   return currentIndex === 0 ? Object.values(Projects).length : currentId - 1;
 };
 
+const showLink = (link: string) => {
+  if (link !== "") {
+    return (
+      <a href={link} target={"_blank"} className="link" rel="noreferrer"><p>Link to website</p> <Arrow /></a>
+    )
+  }
+}
+
 const Project: React.FC = () => {
   const { id } = useParams<{id: string}>();
   const project = getProjectById(Number(id));
@@ -66,8 +74,7 @@ const Project: React.FC = () => {
                   <p className="tag md-1" key={index}>{tag}</p>
                 ))}
               </div>
-              <Link to={{ pathname: project.link}} target={"_blank"} className="link"><p>Link to website</p> <Arrow /></Link>
-
+              {showLink(project.link)}
               <div className='align align_row'>
                 <div className='align align_column'>
                   <p>year</p>

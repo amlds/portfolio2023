@@ -1,12 +1,6 @@
 .logo {
-  /* transform: translate(-50%, -50%); */
   svg {
     animation: rotation 35s infinite linear;
-
-    /* &:hover {
-      animation: rotationScale 35s infinite linear;
-
-    } */
   }
 }
 
@@ -18,15 +12,3 @@
     transform: rotate(360deg);
   }
 }
-
-/* @keyframes rotationScale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(6);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */

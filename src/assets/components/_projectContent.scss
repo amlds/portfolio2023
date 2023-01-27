@@ -13,9 +13,9 @@
       flex-direction: column;
       align-items: center;
       position: sticky;
-      top: 5%;
+      top: 10rem;
       margin-top: 10%;
-      height: 85vh;
+      height: 72vh;
       .rectangle {
         flex-grow: 1;
         width: 130px;
@@ -36,6 +36,46 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .project {
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem 0;
+
+
+    &__decoration {
+      .sticky {
+        display: none;
+      }
+    }
+
+    &__content {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem 0;
+
+
+    &__decoration {
+      .sticky {
+        display: none;
+      }
+    }
+
+    &__content {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   .project {
@@ -52,6 +92,7 @@
 
     &__content {
       padding: 0;
+      margin: 0;
     }
   }
 }

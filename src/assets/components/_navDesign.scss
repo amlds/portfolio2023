@@ -7,45 +7,16 @@
 .navDesign {
   border-bottom: 2px solid var(--text-color);
   position: relative;
-  z-index: 999;
-
-
-  &::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background-color:var(--background);
-    border-bottom: var(--text-color) 2px solid;
-    z-index: -1;
-  }
-  &::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 100%;
-    width: 100%;
-    height: 100%;
-    background-color:var(--background);
-    border-bottom: var(--text-color) 2px solid;
-    z-index: -1;
-  }
-
+  box-sizing: border-box;
+  padding: 1em 10em;
   a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-
-
     .navDesign__content {
       display: flex;
       align-items: center;
       gap: 2rem;
-      width: 50%;
-
       .rectangle {
         width: 64px;
         height: 16px;
@@ -55,12 +26,10 @@
         padding-right: 2px;
       }
     }
-
     .arrow {
       transition: transform 0.3s cubic-bezier(.23,1,.32,1);
-      transform: rotate(45deg);
+      transform: rotate(45deg) translate(-1em, 1em);
     }
-
     &:hover {
       span {
         color: var(--background);
@@ -68,21 +37,86 @@
       .h{
         opacity: 1;
       }
-
     }
-
   }
 }
 
-
-@media only screen and (max-width: 600px) {
-  .DesignProject{
-    min-height: fit-content;
-  }
+@media only screen and (max-width: 1400px) {
   .navDesign {
+    padding: 1em 8em;
+
     a {
       height: 50px;
       .navDesign__content {
+        gap: 1rem;
+        .h {
+          --webkit-text-stroke: 1px var(--background);
+          font-size: 1.5rem;
+        }
+        span {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .navDesign {
+    padding: 1em 5em;
+
+    a {
+      height: 50px;
+      .navDesign__content {
+        gap: 1rem;
+        .h {
+          --webkit-text-stroke: 1px var(--background);
+          font-size: 1.25rem;
+        }
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .navDesign {
+    padding: 1em 3em;
+
+    a {
+      height: 50px;
+      .navDesign__content {
+        .rectangle {
+          display: none;
+        }
+        gap: 1rem;
+        .h {
+          --webkit-text-stroke: 1px var(--background);
+          font-size: 1.25rem;
+        }
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .navDesign {
+    padding: 1em 1em;
+
+    a {
+      height: 50px;
+      .navDesign__content {
+        .rectangle {
+          display: none;
+        }
         gap: 1rem;
         .h {
           --webkit-text-stroke: 1px var(--background);

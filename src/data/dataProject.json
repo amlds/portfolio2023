@@ -6,7 +6,7 @@
     "littledescription": "Vélo pédagogique",
     "description": "Vel-Watt est un projet innovant qui vise à utiliser les vélos pour produire de l'électricité. Le projet comprend une interface graphique avec un mini-jeu 3D et une application web qui permet de suivre la production d'électricité et de sensibiliser aux valeurs énergétiques.",
     "image": ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080"],
-    "tags": ["React.js", "Node.js", "SCSS", "UX/UI design" ],
+    "tags": ["React", "Node.js", "SCSS", "UX/UI design" ],
     "link": "https://www.velwatt.com",
     "type": ["computer", "mobile"],
     "role": ["développeur", "designer"]
@@ -18,7 +18,7 @@
     "littledescription": "Portfolio",
     "description": "Generateur de brainstorming",
     "image": ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080"],
-    "tags": ["React.js", "TypeScript", "SCSS", "UX/UI design"],
+    "tags": ["React", "TypeScript", "SCSS", "UX/UI design"],
     "link": "https://https://www.alexymartinetprod.com/.com/",
     "type": ["computer", "mobile"],
     "role": ["développeur", "designer"]
@@ -30,8 +30,8 @@
     "littledescription": "Affichage dynamique",
     "description": "Affichage dynamique",
     "image": ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080"],
-    "tags": ["React.js", "TypeScript", "SCSS", "Rest"],
-    "link": "https://vel-watt.com/",
+    "tags": ["React", "TypeScript", "SCSS", "Rest"],
+    "link": "",
     "type": ["computer", "mobile"],
     "role": ["développeur"]
   },
@@ -67,7 +67,7 @@
     "description": "Actualité sur la comptabilité",
     "image": ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080"],
     "tags": ["Figma", "UX/UI design", "BravoStudio"],
-    "link": "https://vel-watt.com/",
+    "link": "",
     "type": ["mobile"],
     "role": ["développeur", "designer"]
   }

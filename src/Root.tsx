@@ -10,7 +10,6 @@ import Header from './components/Header';
 
 import SwitchPages from './components/SwitchPage';
 
-
 const Root: React.FC = () => {
   return (
     <BrowserRouter>

@@ -1,40 +1,24 @@
 header {
+  border-bottom: var(--text-color) 2px solid;
+  background-color: var(--background);
+
   z-index: 9999;
+
   display: flex;
   justify-content: space-between;
+
+  width: 100vw;
+
+
   position: fixed;
-  width: min(100% - 1em, 95em);
-  left: 50%;
-  transform: translate(-50%, 0);
-  padding: 1.5rem 0;
-  background-color:var(--background);
-  border-bottom: var(--text-color) 2px solid;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  box-sizing: border-box;
+  padding: 1em 6em;
   opacity: 1;
-
-  transition: transform .5s ease-in-out .5s, opacity .5s ease-in-out .5s;
-
-  &::after{
-    z-index: 9999;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background-color:var(--background);
-    border-bottom: var(--text-color) 2px solid;
-  }
-  &::before{
-    z-index: 9999;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 100%;
-    width: 100%;
-    height: 100%;
-    background-color:var(--background);
-    border-bottom: var(--text-color) 2px solid;
-  }
 
   nav {
     display: flex;
@@ -46,4 +30,47 @@ header {
 .header--hidden {
   transform: translate(-50%, -100%);
   opacity: 0;
+}
+
+@media only screen and (max-width: 1400px) {
+  header {
+    padding: 1em 6em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    padding: 1em 6em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 1em 3em;
+    nav {
+      gap: 16px;
+    }
+    svg {
+      width: 2em;
+      height: 2em;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 1em 1em;
+    nav {
+      gap: 16px;
+    }
+    svg {
+      width: 2em;
+      height: 2em;
+    }
+  }
+  .header--hidden {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
 }

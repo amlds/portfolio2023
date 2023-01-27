@@ -5,7 +5,6 @@ import Banner from "../components/Banner";
 import Decoration from "../components/Decoration";
 import ProjectContent from "../components/ProjectContent";
 import DesignProject from "../components/DesignProject";
-import TestScroll from "../components/TestScroll"
 
 interface Props { }
 
@@ -16,9 +15,8 @@ const Home: React.FC<Props> = (props) => {
         <Decoration />
         <Banner message="DEVELOPPEUR" />
         <ProjectContent />
-        <Banner message="DESIGNER" />
+        <Banner message="DESIGNE" />
         <DesignProject />
-        <TestScroll />
       </div>
     </main>
   );

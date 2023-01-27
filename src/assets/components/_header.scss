@@ -17,7 +17,7 @@ header {
   right: 0;
 
   box-sizing: border-box;
-  padding: 1em 10em;
+  padding: 1em 6em;
   opacity: 1;
 
   nav {
@@ -32,9 +32,35 @@ header {
   opacity: 0;
 }
 
+@media only screen and (max-width: 1400px) {
+  header {
+    padding: 1em 6em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    padding: 1em 6em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 1em 3em;
+    nav {
+      gap: 16px;
+    }
+    svg {
+      width: 2em;
+      height: 2em;
+    }
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   header {
+    padding: 1em 1em;
     nav {
       gap: 16px;
     }

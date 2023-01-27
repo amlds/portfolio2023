@@ -12,7 +12,7 @@ const ProjectContent: React.FC = () => {
         <div className="project__decoration">
           <div className="sticky">
             <Logo />
-            <h4>2022</h4>
+            {/* <h4>2022</h4> */}
             <div className="rectangle"></div>
           </div>
         </div>

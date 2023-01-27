@@ -1,9 +1,9 @@
 .banner {
-  border: 2px solid var(--text-color);
-  padding: 1rem;
+  border-top: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  padding: 1rem 0;
   position: relative;
-  left: -10px;
-  width: 120%;
+  width: 100vw;
   overflow: hidden;
 
   &__content {
@@ -42,8 +42,6 @@
 @media only screen and (max-width: 600px) {
   .banner {
     padding: 0.5rem 0 0;
-    left: -5px;
-    width: 110%;
 
     &__content {
       .rectangle {

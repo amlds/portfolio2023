@@ -1,19 +1,27 @@
 header {
+  border-bottom: var(--text-color) 2px solid;
+  background-color: var(--background);
+
   z-index: 9999;
+
   display: flex;
   justify-content: space-between;
+
+  width: 100vw;
+
+
   position: fixed;
-  width: min(100% - 1em, 95em);
-  left: 50%;
-  transform: translate(-50%, 0);
-  padding: 1.5rem 0;
-  background-color:var(--background);
-  border-bottom: var(--text-color) 2px solid;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  box-sizing: border-box;
+  padding: 1.5rem 1.5rem;
   opacity: 1;
 
-  transition: transform .5s ease-in-out .5s, opacity .5s ease-in-out .5s;
 
-  &::after{
+  /* &::after{
     z-index: 9999;
     content: "";
     position: absolute;
@@ -34,7 +42,7 @@ header {
     height: 100%;
     background-color:var(--background);
     border-bottom: var(--text-color) 2px solid;
-  }
+  } */
 
   nav {
     display: flex;

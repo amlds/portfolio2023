@@ -5,6 +5,10 @@ html {
 body{
   margin: 0;
   overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Satoshi";
+  font-size: 1rem;
+
 }
 
 main {
@@ -15,7 +19,7 @@ main {
 
 section {
   min-height: 96vh;
-  width: min(100% - 1em, 95em);
+  width: min(95% - 1em, 100em);
   margin: 0 auto;
 }
 

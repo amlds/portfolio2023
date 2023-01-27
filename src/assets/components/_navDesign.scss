@@ -10,7 +10,7 @@
   z-index: 999;
 
 
-  &::after{
+  /* &::after{
     content: "";
     position: absolute;
     top: 0;
@@ -31,7 +31,7 @@
     background-color:var(--background);
     border-bottom: var(--text-color) 2px solid;
     z-index: -1;
-  }
+  } */
 
   a {
     display: flex;

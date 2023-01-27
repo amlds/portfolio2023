@@ -30,6 +30,50 @@
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .navProject{
+    &__content{
+      gap: 0.75rem;
+      a, div, .hoverLink, span {
+        font-size: 4rem;
+      }
+    }
+    &__tags {
+      gap: 0.75rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navProject{
+    &__content{
+      gap: 0.75rem;
+      a, div, .hoverLink, span {
+        font-size: 3.5rem;
+      }
+    }
+    &__tags {
+      gap: 0.75rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navProject{
+    &__content{
+      gap: 0.75rem;
+      a, div, .hoverLink, span {
+        font-size: 3rem;
+      }
+    }
+    &__tags {
+      gap: 0.75rem;
+    }
+  }
+
+}
+
+
 @media only screen and (max-width: 600px) {
   .navProject {
     .littleDescription {

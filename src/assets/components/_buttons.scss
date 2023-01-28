@@ -114,8 +114,7 @@ input[type="checkbox"] {
   transform: translate(45px, 0px);
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .button {
     padding: 16px 64px;
   }

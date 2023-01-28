@@ -6,10 +6,10 @@ import ButtonTheme from './ButtonTheme';
 
 
 const scrollToTop = () => {
-  window.scrollTo({
+  /* window.scrollTo({
     top: 0,
     behavior: 'smooth',
-  });
+  }); */
 }
 
 const Header: React.FC = () => {

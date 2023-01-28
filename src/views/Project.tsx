@@ -29,18 +29,17 @@ const getProjectById = (id: number): Props | undefined => {
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
   });
 }
 
 const getNextProjectId = (currentId: number): number => {
   const currentIndex = Object.values(Projects).findIndex((project: Props) => project.id === currentId);
-  return currentIndex === Object.values(Projects).length - 1 ? 1 : currentId + 1;
+  return currentIndex === Object.values(Projects).length - 1 ? 0 : currentId + 1;
 };
 
 const getPreviousProjectId = (currentId: number): number => {
   const currentIndex = Object.values(Projects).findIndex((project: Props) => project.id === currentId);
-  return currentIndex === 0 ? Object.values(Projects).length : currentId - 1;
+  return currentIndex === 0 ? Object.values(Projects).length - 1 : currentId - 1;
 };
 
 const showLink = (link: string) => {

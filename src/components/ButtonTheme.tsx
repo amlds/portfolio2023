@@ -50,7 +50,7 @@ const ButtonToggle: React.FC = () => {
   }, []);
 
   return (
-    <label className="buttonTheme_toggle" id="_1st-toggle-btn">
+    <label className="buttonTheme_toggle" id="_toggle-btn">
       <input
         type="checkbox"
         checked={checked}

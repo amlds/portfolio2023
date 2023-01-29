@@ -6,6 +6,7 @@ header {
 
   display: flex;
   justify-content: space-between;
+  padding: min(95% - 1em, 100em);
 
   width: 100vw;
 
@@ -30,18 +31,6 @@ header {
 .header--hidden {
   transform: translate(-50%, -100%);
   opacity: 0;
-}
-
-@media only screen and (max-width: 1400px) {
-  header {
-    padding: 1em 3em;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  header {
-    padding: 1em 2em;
-  }
 }
 
 @media only screen and (max-width: 768px) {

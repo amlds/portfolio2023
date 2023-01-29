@@ -40,6 +40,8 @@
     transition: transform .25s ease-out;
   }
 
+
+
   &:hover{
     p::after {
       transform: scaleX(1);
@@ -47,6 +49,17 @@
     }
     .arrow {
       transform: rotate(225deg);
+    }
+  }
+}
+
+.changeProject__next{
+  .arrow {
+    transform: rotate(0deg);
+  }
+  &:hover{
+    .arrow {
+      transform: rotate(45deg);
     }
   }
 }
@@ -84,7 +97,8 @@ input[type="checkbox"] {
 }
 
 
-#_1st-toggle-btn span {
+
+#_toggle-btn span {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -98,48 +112,50 @@ input[type="checkbox"] {
   transition: 0.2s ease background-color, 0.2s ease opacity;
 }
 
-#_1st-toggle-btn span:before,
-#_1st-toggle-btn span:after {
+#_toggle-btn span:before,
+#_toggle-btn span:after {
   content: "";
   position: absolute;
   top: 3px;
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  transition: 0.5s ease transform, 0.2s ease background-color;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) transform, 0.2s ease background-color;
 }
 
-#_1st-toggle-btn span:before {
+#_toggle-btn span:before {
   background-color: var(--background);
   transform: translate(-58px, 0px);
   z-index: 1;
 }
 
-#_1st-toggle-btn span:after {
+#_toggle-btn span:after {
   background-color: var(--text-color);
-  transform: translate(3px, 0px);
+  transform: translate(2px, 0px);
   z-index: 0;
 }
 
-#_1st-toggle-btn input[type="checkbox"]:checked + span {
+#_toggle-btn input[type="checkbox"]:checked + span {
   background-color: var(--background);
   border: 2px solid var(--text-color);
 }
 
-#_1st-toggle-btn input[type="checkbox"]:active + span {
+#_toggle-btn input[type="checkbox"]:active + span {
   opacity: 0.5;
 }
 
-#_1st-toggle-btn input[type="checkbox"]:checked + span:before {
+#_toggle-btn input[type="checkbox"]:checked + span:before {
   background-color: var(--background);
   transform: translate(36px, -5px);
 }
 
-#_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+#_toggle-btn input[type="checkbox"]:checked + span:after {
   background-color: var(--text-color);
   transform: translate(45px, 0px);
 }
 
+
+//media querie phone
 @media only screen and (max-width: 768px) {
   .button {
     padding: 16px 64px;
@@ -155,19 +171,58 @@ input[type="checkbox"] {
   }
 
 
-  #_1st-toggle-btn span:before,
-  #_1st-toggle-btn span:after {
+  #_toggle-btn span:before,
+  #_toggle-btn span:after {
   content: "";
   top: 3px;
   width: 19px;
   height: 19px;
   }
-  #_1st-toggle-btn input[type="checkbox"]:checked + span:before {
+  #_toggle-btn input[type="checkbox"]:checked + span:before {
     background-color: var(--background);
     transform: translate(26px, -5px);
   }
-  #_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+  #_toggle-btn input[type="checkbox"]:checked + span:after {
     background-color: var(--text-color);
     transform: translate(33px, 0px);
+  }
+}
+
+
+.link {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  p {
+    display: inline-block;
+    position: relative;
+    font-family: 'Cabinet-Black';
+    font-size: 2rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 10px;
+      left: 0;
+      background-color: var(--text-color);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+  }
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    p::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .arrow {
+      transform: rotate(45deg);
+    }
   }
 }

@@ -3,7 +3,7 @@ header {
   background-color: var(--background);
 
   z-index: 9999;
-
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding: min(95% - 1em, 100em);
@@ -21,22 +21,32 @@ header {
   padding: 1em 8%;
   opacity: 1;
 
-  nav {
+  .navComputer {
     display: flex;
     align-items: center;
     gap: 32px;
   }
+  .burger-menu {
+    display: none;
+  }
+  #burger-button {
+    display: none;
+  }
 }
 
-.header--hidden {
-  transform: translate(-50%, -100%);
-  opacity: 0;
-}
 
 @media only screen and (max-width: 768px) {
   header {
-    nav {
-      gap: 16px;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    .burger-menu {
+      display: block;
+    }
+    .navComputer {
+      display: none;
+    }
+    #burger-button {
+      display: flex;
     }
     svg {
       width: 2em;
@@ -48,17 +58,17 @@ header {
 
 @media only screen and (max-width: 600px) {
   header {
-    padding: 1em 1em;
-    nav {
-      gap: 16px;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    .navComputer {
+      display: none;
+    }
+    #burger-button {
+      display: flex;
     }
     svg {
       width: 2em;
       height: 2em;
     }
-  }
-  .header--hidden {
-    transform: translate(-50%, 0);
-    opacity: 1;
   }
 }

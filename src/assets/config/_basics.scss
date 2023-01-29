@@ -23,7 +23,7 @@ section {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, label {
   margin: 0;
   color: var(--text-color);
   line-height: 150%;
@@ -57,6 +57,12 @@ p {
   font-family: "Satoshi";
   font-size: 1rem;
   font-weight: 400;
+}
+
+label {
+  font-family: "Satoshi";
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 a {
@@ -96,6 +102,7 @@ a {
 }
 
 .separator {
+  width: 100%;
   border-top: 2px solid var(--text-color);
 }
 

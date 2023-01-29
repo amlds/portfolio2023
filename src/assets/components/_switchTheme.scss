@@ -1,0 +1,42 @@
+.SwitchTheme {
+  display: flex;
+  gap: 1rem;
+  &_Hidden {
+    display: none;
+  }
+
+  &_label {
+    display: inline;
+    position: relative;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 3px;
+      bottom: 20px;
+      left: 0;
+      background-color: var(--text-color);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    &:active::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+}
+
+.label_active {
+  &::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

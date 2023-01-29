@@ -14,10 +14,10 @@ interface Props {
 }
 
 const scrollToTop = () => {
-  /* window.scrollTo({
+  window.scrollTo({
     top: 0,
     behavior: 'smooth',
-  }); */
+  });
 }
 
 const NavDesign: React.FC<Props> = ({ project }) => {

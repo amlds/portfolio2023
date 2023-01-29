@@ -7,9 +7,20 @@ const ButtonToggle: React.FC = () => {
   useEffect(() => {
     const main = document.querySelector('main');
     if (main) {
-      main.classList.remove('light-theme');
+      main.classList.remove('light-');
       main.classList.remove('dark-theme');
       main.classList.add(`${theme}-theme`);
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    const img = document.querySelector('.about__img');
+    if (img) {
+      if (theme === 'light') {
+        img.classList.add('negatif__img');
+      } else {
+        img.classList.remove('negatif__img');
+      }
     }
   }, [theme]);
 
@@ -25,6 +36,7 @@ const ButtonToggle: React.FC = () => {
     };
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
     darkModeQuery.addEventListener('change', handleDarkModeChange);
+
     if (darkModeQuery.matches) {
       setCurrentTheme('dark');
       setChecked(true);

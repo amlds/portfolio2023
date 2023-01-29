@@ -38,7 +38,6 @@
         display: flex;
         align-items: flex-start;
         gap: 3rem;
-
       }
     }
 
@@ -51,6 +50,9 @@
     width: 50%;
     height: 85%;
     object-fit: cover;
+  }
+  .negatif__img {
+    filter: invert(0.9);
   }
 }
 

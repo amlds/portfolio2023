@@ -12,8 +12,8 @@ const SwitchPage: React.FC<Props> = ({ children }) => {
   return (
       <TransitionGroup>
         <CSSTransition  key={location.pathname}
-                        timeout={300}
-                        classNames="slide">
+                        classNames="slide"
+                        timeout={1000}>
           <Routes location={location}>{children}</Routes>
         </CSSTransition>
       </TransitionGroup>

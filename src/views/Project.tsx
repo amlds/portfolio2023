@@ -72,9 +72,9 @@ const Project: React.FC = () => {
           <div className='projectPages_content'>
             <div className='projectPages_header'>
               <div className='projectPages_header_text'>
-                <Link to={`/`} className="return_btn"><Arrow /> <p>Retour</p></Link>
+                  <Link to={`/`} className="return_btn"><Arrow /> <p className='md-1'>Retour</p></Link>
+                <span className='separator'></span>
                 <h1>{project.title}</h1>
-                <p>{project.littledescription}</p>
                 <p>{project.description}</p>
                 <div className='tags'>
                   {project.tags.map((tag, index) => (

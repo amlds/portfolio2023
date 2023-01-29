@@ -4,6 +4,8 @@ import HoverLink from "./HoverLink";
 import Logo from "./svg/Logo";
 import ButtonTheme from './ButtonTheme';
 
+import MenuBurger from './MenuBurger';
+
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -41,7 +43,7 @@ const Header: React.FC = () => {
       <Link to="/" onClick={scrollToTop}>
         <Logo />
       </Link>
-      <nav>
+      <nav className="navComputer">
         <Link to="/" onClick={scrollToTop}>
           <HoverLink infos={
             {
@@ -60,6 +62,7 @@ const Header: React.FC = () => {
         </Link>
         <ButtonTheme />
       </nav>
+      <MenuBurger />
     </header>
   );
 }

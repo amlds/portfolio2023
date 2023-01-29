@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 
 const About: React.FC = () => {
+  const [theme, setTheme] = React.useState<HTMLElement | null>(null);
 
-  /*const changeThemeImg = () => {
+  useEffect(() => {
+    return setTheme(document.querySelector("main"));
+  }, [theme]);
+
+  const ThemeImg = () =>{
     if (theme) {
-      if (theme.classList.contains('light-theme')) {
+      if (theme.classList.contains('dark-theme')) {
         return (
           <img
             src="./images/moi.jpg"
             alt="Alexy Martinet"
-            style= {{ filter: "invert(1)" }}
+            className="about__img"
           />
         );
       } else {
@@ -17,12 +23,12 @@ const About: React.FC = () => {
           <img
             src="./images/moi.jpg"
             alt="Alexy Martinet"
-            style= {{ filter: "invert(0)" }}
+            className="about__img negatif__img"
           />
         );
       }
     }
-  };*/
+  };
 
   return (
     <main>
@@ -68,7 +74,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <img className="about__img" src="./images/moi.jpg" alt="img" />
+        {ThemeImg()}
       </section>
     </main>
   );

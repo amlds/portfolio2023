@@ -17,22 +17,48 @@
   color: var(--background);
   font-family: "Satoshi-Medium";
   font-size: 1.25rem;
+  transition: gap .25s ease-out;
   p {
-    padding-right: 50%;
+    font-size: 1.5rem;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0px;
+      left: 0;
+      background-color: var(--text-color);
+      transform-origin: bottom right;
+      transition: transform .25s ease-out;
+    }
+  }
 
-  }
   .arrow {
-    left: 100%;
-    opacity: 0;
-    transition: transform 0.3s ease;
+    transform: rotate(265deg);
+    transition: transform .25s ease-out;
   }
-  &:hover {
+
+  &:hover{
+    p::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
     .arrow {
-      opacity: 1;
-      transform: rotate(45deg);
+      transform: rotate(225deg);
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .return_btn {
+    p {
+      padding-right: 0;
+    }
+  }
+}
+
 
 
 .buttonTheme_toggle {

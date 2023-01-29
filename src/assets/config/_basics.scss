@@ -90,12 +90,9 @@ a {
   }
 }
 
-.return_btn {
-  .arrow {
-    transform: rotate(225deg);
-  }
+.separator {
+  border-top: 2px solid var(--text-color);
 }
-
 
 @media only screen and (max-width: 600px) {
   html {

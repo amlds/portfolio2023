@@ -11,6 +11,7 @@ interface Props {
   year: number;
   description: string;
   littledescription: string;
+  imageFirst: string;
   image: string[];
   tags: string[];
   link: string;
@@ -50,6 +51,12 @@ const showLink = (link: string) => {
   }
 }
 
+const showImg = (img: string[]) => {
+  return img.map((img, index) => (
+    <img className="projectPages_img" src={process.env.PUBLIC_URL + img} alt={"projet"} key={index} />
+  ))
+}
+
 const Project: React.FC = () => {
   const { id } = useParams<{id: string}>();
   const project = getProjectById(Number(id));
@@ -59,56 +66,57 @@ const Project: React.FC = () => {
   console.log(previousProject, nextProject)
 
   return (
-    <section className='projectPages'>
-      {project ? (
-        <div className='projectPages_content'>
-          <div className='projectPages_header'>
-            <div className='projectPages_header_text'>
-              <Link to={`/`} className="return_btn"><Arrow /> <p>Retour</p></Link>
-              <h1>{project.title}</h1>
-              <p>{project.littledescription}</p>
-              <p>{project.description}</p>
-              <div className='tags'>
-                {project.tags.map((tag, index) => (
-                  <p className="tag md-1" key={index}>{tag}</p>
-                ))}
-              </div>
-              {showLink(project.link)}
-              <div className='align align_row'>
-                <div className='align align_column'>
-                  <p>year</p>
-                  <p className='md-1'>{project.year}</p>
-                </div>
-                <div className='align align_column'>
-                  <p>Rôle</p>
-                  {project.role.map((role, index) => (
-                    <p className="md-1" key={index}>{role}</p>
+    <main>
+      <section className='projectPages'>
+        {project ? (
+          <div className='projectPages_content'>
+            <div className='projectPages_header'>
+              <div className='projectPages_header_text'>
+                <Link to={`/`} className="return_btn"><Arrow /> <p>Retour</p></Link>
+                <h1>{project.title}</h1>
+                <p>{project.littledescription}</p>
+                <p>{project.description}</p>
+                <div className='tags'>
+                  {project.tags.map((tag, index) => (
+                    <p className="tag md-1" key={index}>{tag}</p>
                   ))}
                 </div>
+                {showLink(project.link)}
+                <div className='align align_row'>
+                  <div className='align align_column'>
+                    <p>year</p>
+                    <p className='md-1'>{project.year}</p>
+                  </div>
+                  <div className='align align_column'>
+                    <p>Rôle</p>
+                    {project.role.map((role, index) => (
+                      <p className="md-1" key={index}>{role}</p>
+                    ))}
+                  </div>
+                </div>
               </div>
+              <img className="projectPages_header_img" src={process.env.PUBLIC_URL + project.imageFirst} alt={"image 1 de " + project.title} />
             </div>
-            <img className="projectPages_header_img" src={project.image[0]} alt={"image 1 de " + project.title} />
-          </div>
-          <img className="projectPages_img" src={project.image[1]} alt={"image 2 de " + project.title} />
-          <img className="projectPages_img" src={project.image[2]} alt={"image 3 de " + project.title} />
-          <div className='changeProject'>
-            <Link to={`/project/${getPreviousProjectId(project.id)}`}
-                  className='changeProject__prev'
-                  onClick={scrollToTop}>
-              <Arrow /> Previous project
-            </Link>
+            {showImg(project.image)}
+            <div className='changeProject'>
+              <Link to={`/project/${getPreviousProjectId(project.id)}`}
+                    className='changeProject__prev'
+                    onClick={scrollToTop}>
+                <Arrow /> Previous project
+              </Link>
 
-            <Link to={`/project/${getNextProjectId(project.id)}`}
-                  className='changeProject__next'
-                  onClick={scrollToTop}>
-              Next project <Arrow />
-            </Link>
+              <Link to={`/project/${getNextProjectId(project.id)}`}
+                    className='changeProject__next'
+                    onClick={scrollToTop}>
+                Next project <Arrow />
+              </Link>
+            </div>
           </div>
-        </div>
-      ) : (
-        <p className='projectNotCharged'>Projet non trouvé</p>
-      )}
-    </section>
+        ) : (
+          <p className='projectNotCharged'>Projet non trouvé</p>
+        )}
+      </section>
+    </main>
   );
 };
 

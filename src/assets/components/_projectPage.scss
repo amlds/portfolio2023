@@ -1,5 +1,6 @@
 .projectPages {
   padding-top: 8rem;
+  min-height: fit-content;
 
   &_content {
     display: flex;
@@ -17,43 +18,7 @@
       flex-direction: column;
       gap: 1rem;
       width: 45%;
-      .link {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        p {
-          display: inline-block;
-          position: relative;
-          font-family: 'Cabinet-Black';
-          font-size: 2rem;
 
-          &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 10px;
-            left: 0;
-            background-color: var(--text-color);
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-          }
-        }
-        .arrow {
-          transition: transform 0.3s ease;
-        }
-
-        &:hover {
-          p::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
-          .arrow {
-            transform: rotate(45deg);
-          }
-        }
-      }
 
       p {
         font-size: 1rem;
@@ -84,23 +49,6 @@
     align-items: center;
     width: 100%;
     margin: 2rem 0;
-
-    &__prev {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      .arrow {
-        transform: rotate(225deg);
-      }
-    }
-    &__next {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      .arrow {
-        transform: rotate(45deg);
-      }
-    }
   }
 }
 

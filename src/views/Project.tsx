@@ -46,7 +46,7 @@ const getPreviousProjectId = (currentId: number): number => {
 const showLink = (link: string) => {
   if (link !== "") {
     return (
-      <a href={link} target={"_blank"} className="link" rel="noreferrer"><p>Link to website</p> <Arrow /></a>
+      <a href={link} target={"_blank"} className="link cg-1" rel="noreferrer"><p>Link to website</p> <Arrow /></a>
     )
   }
 }
@@ -100,15 +100,15 @@ const Project: React.FC = () => {
             {showImg(project.image)}
             <div className='changeProject'>
               <Link to={`/project/${getPreviousProjectId(project.id)}`}
-                    className='changeProject__prev'
+                    className='changeProject__prev return_btn'
                     onClick={scrollToTop}>
-                <Arrow /> Previous project
+                <Arrow /><p>Previous</p>
               </Link>
 
               <Link to={`/project/${getNextProjectId(project.id)}`}
-                    className='changeProject__next'
+                    className='changeProject__next return_btn'
                     onClick={scrollToTop}>
-                Next project <Arrow />
+                <p>Next</p><Arrow />
               </Link>
             </div>
           </div>

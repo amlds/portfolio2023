@@ -40,6 +40,8 @@
     transition: transform .25s ease-out;
   }
 
+
+
   &:hover{
     p::after {
       transform: scaleX(1);
@@ -47,6 +49,17 @@
     }
     .arrow {
       transform: rotate(225deg);
+    }
+  }
+}
+
+.changeProject__next{
+  .arrow {
+    transform: rotate(0deg);
+  }
+  &:hover{
+    .arrow {
+      transform: rotate(45deg);
     }
   }
 }
@@ -169,5 +182,44 @@ input[type="checkbox"] {
   #_1st-toggle-btn input[type="checkbox"]:checked + span:after {
     background-color: var(--text-color);
     transform: translate(33px, 0px);
+  }
+}
+
+
+.link {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  p {
+    display: inline-block;
+    position: relative;
+    font-family: 'Cabinet-Black';
+    font-size: 2rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 10px;
+      left: 0;
+      background-color: var(--text-color);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+  }
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    p::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .arrow {
+      transform: rotate(45deg);
+    }
   }
 }

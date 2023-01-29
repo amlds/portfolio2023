@@ -51,6 +51,7 @@ const About: React.FC = () => {
                 <p>Front-end développeur basé à Toulouse & Lyon, France</p>
                 <p>Je développe et design des site web</p>
                 <p>Professeur au Wagon & La toile</p>
+                <p>Ancien technicien audiovisuel</p>
               </div>
             </div>
             <div className="about--row">

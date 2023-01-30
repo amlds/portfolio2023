@@ -43,19 +43,21 @@ const About: React.FC = () => {
             <h1>MARTINET</h1>
           </div>
         </div>
+            <span className="separator"></span>
         <div className="aboutPage__content">
           <div className="aboutPage__content--text">
             <div className="about--row">
               <h3>À propos</h3>
               <div>
                 <p>Front-end développeur basé à Toulouse & Lyon, France</p>
-                <p>Je développe et design des site web</p>
-                <p>Professeur au Wagon & La toile</p>
+                <p>Je développe et design des sites web</p>
+                <p>Professeur au <a className="linkAbout cursorHover" target="_blank" rel="noreferrer" href="https://www.lewagon.com/fr">Wagon </a> & <a className="linkAbout cursorHover" target="_blank" rel="noreferrer" href="https://latoile.em-lyon.com/">La toile</a>
+                </p>
                 <p>Ancien technicien audiovisuel</p>
               </div>
             </div>
             <div className="about--row">
-              <h3>Rôle</h3>
+              <h3>Compétence</h3>
               <div>
                 <p>Front-end développeur</p>
                 <p>React / TypeScript</p>
@@ -70,7 +72,6 @@ const About: React.FC = () => {
                 {/*<p>Instagram : <a className="linkAbout" href="https://www.instagram.com/amlds/" target="_blank" rel="noreferrer">@amlds</a></p>*/}
                 <p>Github : <a className="linkAbout cursorHover" href="https://github.com/amlds" target="_blank" rel="noreferrer">@amlds</a></p>
                 <p>Linkedin : <a className="linkAbout cursorHover" href="https://www.linkedin.com/in/alexy-martinet-9a6580168/" target="_blank" rel="noreferrer">@Alexy Martinet</a></p>
-                <p>Mail : <a className="linkAbout cursorHover" href="mailto:am.production.dev@gmail.com">am.production.dev@gmail.com</a></p>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ const Home: React.FC<Props> = (props) => {
         <Decoration />
         <Banner message="DEVELOPPEUR" />
         <ProjectContent />
-        <Banner message="DESIGNE" />
+        <Banner message="DESIGN" />
         <DesignProject />
       </div>
     </main>

@@ -2,6 +2,10 @@
   cursor: none;
 }
 
+.mobile {
+  display: none;
+}
+
 .cursor-dot,
 .cursor-dot-outline {
   z-index: 99999999;

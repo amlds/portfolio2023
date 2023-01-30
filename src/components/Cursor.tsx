@@ -63,10 +63,10 @@ const Cursor: React.FC = () => {
 
 
   return (
-    <>
+    <div className="cursor">
       <div className="cursor-dot-outline cursor-dotOutline--Animated" ref={dotOutline}></div>
       <div className="cursor-dot" ref={dot}></div>
-    </>
+    </div>
   );
 };
 

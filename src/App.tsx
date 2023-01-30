@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Root from './Root';
 import classnames from 'classnames';
+
+import Root from './Root';
+import Cursor from './components/Cursor';
 
 
 const App: React.FC = () => {
@@ -13,6 +15,7 @@ const App: React.FC = () => {
   return (
     <main className={classes}>
       <Root />
+      <Cursor />
     </main>
   );
 }

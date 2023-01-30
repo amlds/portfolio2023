@@ -16,7 +16,6 @@ const App: React.FC = () => {
   React.useEffect(() => {
     const handleResize = () => {
       const cursor = document.querySelector('.cursor');
-      console.log(navigator.userAgent);
       if ( navigator.userAgent.match(/iPhone/i)
         || navigator.userAgent.match(/webOS/i)
         || navigator.userAgent.match(/Android/i)

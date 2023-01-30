@@ -60,11 +60,6 @@ const showImg = (img: string[]) => {
 const Project: React.FC = () => {
   const { id } = useParams<{id: string}>();
   const project = getProjectById(Number(id));
-  const previousProject = getProjectById(getPreviousProjectId(Number(id)));
-  const nextProject = getProjectById(getNextProjectId(Number(id)));
-
-  console.log(previousProject, nextProject)
-
   return (
     <main>
       <section className='projectPages'>

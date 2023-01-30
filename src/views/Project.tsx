@@ -46,7 +46,7 @@ const getPreviousProjectId = (currentId: number): number => {
 const showLink = (link: string) => {
   if (link !== "") {
     return (
-      <a href={link} target={"_blank"} className="link cg-1" rel="noreferrer"><p>Link to website</p> <Arrow /></a>
+      <a href={link} target={"_blank"} className="link cg-1 cursorHover" rel="noreferrer"><p className='cursorHover'>Link to website</p> <Arrow /></a>
     )
   }
 }
@@ -72,7 +72,7 @@ const Project: React.FC = () => {
           <div className='projectPages_content'>
             <div className='projectPages_header'>
               <div className='projectPages_header_text'>
-                  <Link to={`/`} className="return_btn"><Arrow /> <p className='md-1'>Retour</p></Link>
+                  <Link to={`/`} className="return_btn cursorHover"><Arrow /> <p className='md-1 cursorHover'>Retour</p></Link>
                 <span className='separator'></span>
                 <h1>{project.title}</h1>
                 <p>{project.description}</p>
@@ -100,15 +100,15 @@ const Project: React.FC = () => {
             {showImg(project.image)}
             <div className='changeProject'>
               <Link to={`/project/${getPreviousProjectId(project.id)}`}
-                    className='changeProject__prev return_btn'
+                    className='changeProject__prev return_btn cursorHover'
                     onClick={scrollToTop}>
-                <Arrow /><p>Previous</p>
+                <Arrow /><p className='cursorHover'>Previous</p>
               </Link>
 
               <Link to={`/project/${getNextProjectId(project.id)}`}
-                    className='changeProject__next return_btn'
+                    className='changeProject__next return_btn cursorHover'
                     onClick={scrollToTop}>
-                <p>Next</p><Arrow />
+                <p className='cursorHover'>Next</p><Arrow />
               </Link>
             </div>
           </div>

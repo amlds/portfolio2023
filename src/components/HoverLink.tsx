@@ -26,11 +26,11 @@ class HoverLink extends React.Component<Props> {
                         } as React.CSSProperties;
 
       if (letter !== " ") {
-        return  <div key={index} className="h" style={style}>
-                  <span style={styleFont}>{letter}</span>
+        return  <div key={index} className="h cursorHover" style={style}>
+                  <span className="cursorHover" style={styleFont}>{letter}</span>
                 </div>;
       } else {
-        return  <div key={index} className="h" style={style}>
+        return  <div key={index} className="h cursorHover" style={style}>
                   <span style={styleFont}>&nbsp;</span>
                 </div>;
       }
@@ -39,7 +39,7 @@ class HoverLink extends React.Component<Props> {
 
   render() {
     return (
-      <div className="hoverLink">
+      <div className="hoverLink cursorHover">
         {this.component()}
       </div>
     );

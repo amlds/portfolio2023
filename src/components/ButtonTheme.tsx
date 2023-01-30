@@ -52,6 +52,7 @@ const ButtonToggle: React.FC = () => {
   return (
     <label className="buttonTheme_toggle" id="_toggle-btn">
       <input
+        className="cursorHover"
         type="checkbox"
         checked={checked}
         onChange={() => {

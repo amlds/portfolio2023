@@ -6,6 +6,19 @@ const Cursor: React.FC = () => {
   const lastMouseEvent = React.useRef<MouseEvent>();
 
   const onMouseMove = (e: MouseEvent) => {
+    if (e.target instanceof HTMLElement) {
+      e.target.classList.forEach(element => {
+        if (element === "cursorHover") {
+          dot.current?.classList.add("cursor-dot--link");
+          dotOutline.current?.classList.add("cursor-dotOutline--link");
+          dotOutline.current?.classList.remove("cursor-dotOutline--Animated");
+        } else {
+          dot.current?.classList.remove("cursor-dot--link");
+          dotOutline.current?.classList.remove("cursor-dotOutline--link");
+          dotOutline.current?.classList.add("cursor-dotOutline--Animated");
+        }
+      });
+    }
     if (dot.current && dotOutline.current) {
       if(dotOutline.current.style.position === "fixed") {
         dotOutline.current.style.position = "absolute";
@@ -24,6 +37,7 @@ const Cursor: React.FC = () => {
         }
       }, 100);
     }
+
     lastMouseEvent.current = e;
   };
 
@@ -50,7 +64,7 @@ const Cursor: React.FC = () => {
 
   return (
     <>
-      <div className="cursor-dot-outline" ref={dotOutline}></div>
+      <div className="cursor-dot-outline cursor-dotOutline--Animated" ref={dotOutline}></div>
       <div className="cursor-dot" ref={dot}></div>
     </>
   );

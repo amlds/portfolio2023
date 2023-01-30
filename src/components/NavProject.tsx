@@ -26,17 +26,17 @@ const NavProject: React.FC<Props> = ({ project }) => {
     <div className="navProject" ref={projectsRef}>
       <Link to={`/project/${project.id}`}
             onClick={scrollToTop}>
-        <div className="navProject__content">
-          <p className="littleDescription">{project.littledescription}</p>
+        <div className="navProject__content cursorHover">
+          <p className="littleDescription cursorHover">{project.littledescription}</p>
           <HoverLink infos={
             {
               name: project.title,
               font: ["6rem", "Cabinet-Black"]
             }
           }/>
-          <div className="navProject__tags">
+          <div className="navProject__tags cursorHover">
             {project.tags.map((tag, index) => (
-              <p key={index} className="tag md-1">
+              <p key={index} className="tag md-1 cursorHover">
                 {tag}
               </p>
             ))}

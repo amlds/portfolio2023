@@ -23,12 +23,12 @@ const NavDesign: React.FC<Props> = ({ project }) => {
   const projectsRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="navDesign" ref={projectsRef}>
+    <div className="navDesign cursorHover" ref={projectsRef}>
       <Link to={`/project/${project.id}`}
             onClick={scrollToTop}>
-        <div className="navDesign__content">
-          <p className="md-1">{project.year}</p>
-          <div className="rectangle"></div>
+        <div className="navDesign__content cursorHover">
+          <p className="md-1 cursorHover">{project.year}</p>
+          <div className="rectangle cursorHover"></div>
           <HoverLink infos={
             {
               name: project.title,

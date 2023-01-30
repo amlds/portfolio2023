@@ -91,7 +91,6 @@ input[type="checkbox"] {
     right: 0px;
     bottom: 0px;
     margin: 0px;
-    cursor: pointer;
     opacity: 0;
     z-index: 2;
 }
@@ -116,7 +115,7 @@ input[type="checkbox"] {
 #_toggle-btn span:after {
   content: "";
   position: absolute;
-  top: 2px;
+  top: 3px;
   width: 30px;
   height: 30px;
   border-radius: 50%;

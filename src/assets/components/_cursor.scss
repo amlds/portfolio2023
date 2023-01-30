@@ -1,18 +1,54 @@
-#cursor {
-  position: absolute;
+* {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  z-index: 99999999;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: transform .3s linear;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--cursor-color);
+  mix-blend-mode: difference;
+}
+
+.cursor-dot-outline {
   width: 40px;
   height: 40px;
-  background: url(../img/noise.png), rgba(0, 0, 0, 0.298);
-  background-blend-mode: darken, normal;
-  backdrop-filter: blur(5px);
-  border-radius: 50%;
-
-  border: 1px solid #101010;
-
-  top: var(--y, 0);
-  left: var(--x, 0);
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  background-color: var(--cursor-color);
   mix-blend-mode: difference;
-  transition: transform .2s;
+  box-shadow: 1px;
+  transform: scale(0);
+  transition: transform .3s linear, background-color .3s linear, border .3s linear;
+}
+.cursor-dotOutline--Animated {
+  animation: animationNoHover 1s linear infinite alternate;
+}
+
+
+.cursor-dot--link{
+  transform: scale(10);
+}
+
+.cursor-dotOutline--link{
+  animation: animationHover 1s linear infinite alternate;
+}
+
+
+@keyframes animationNoHover {
+  0% { transform: scale(1) translate(-50%, -50%); }
+  100% { transform: scale(1.2) translate(-40%, -40%); }
+}
+
+@keyframes animationHover {
+  0% { transform: scale(0.5) translate(-81%, -81%); }
+  100% { transform: scale(0.4) translate(-100%, -100%); }
 }

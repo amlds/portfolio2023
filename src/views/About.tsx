@@ -65,7 +65,7 @@ const About: React.FC = () => {
                 <p>Figma</p>
               </div>
             </div>
-            <div className="about--row">
+              <div className="about--row">
               <h3>Contact</h3>
               <div>
                 <p>Twitter : <a className="linkAbout cursorHover" href="https://twitter.com/amlds_ma" target="_blank" rel="noreferrer">@amlds_ma</a></p>

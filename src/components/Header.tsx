@@ -40,7 +40,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={`header ${isHeaderHidden ? "header--hid" : ""}`}>
-      <Link to="/" onClick={scrollToTop} className='cursorHover'>
+      <Link to="/" onClick={scrollToTop}>
         <Logo />
       </Link>
       <nav className="navComputer">

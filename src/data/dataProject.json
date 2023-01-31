@@ -4,7 +4,7 @@
     "title": "Vel-Watt",
     "year": 2022,
     "littledescription": "Vélo pédagogique",
-    "description": "Vel-Watt est un projet qui permet d'utiliser des vélos pour produire de l'électricité. Le projet comprend une interface graphique avec un mini-jeu 3D et une application web qui permet de suivre la production d'électricité et de sensibiliser aux valeurs énergétiques. Ce projet est toujours en cours de réalisation, j'ai travailler dessus en tant que développeur et designer UX/UI. J'ai créer l'interface graphique et l'expérience utilisateur puis j'ai réalisé l'intégration de l'interface graphique en React. J'ai aussi réalisé les médias 3D sur Blender puis je les ai intégrer avec three.js.",
+    "description": "Vel-Watt est un projet qui utilise des vélos pour produire de l'électricité. Il comprend une interface graphique avec un mini-jeu 3D et une application web pour suivre la production d'électricité et sensibiliser à l'énergie. Ce projet est en cours de réalisation et j'y travaille en tant que développeur et designer UX/UI. J'ai créé l'interface graphique et l'expérience utilisateur, réalisé l'intégration de l'interface graphique en React et créé les médias 3D sur Blender, puis intégrés avec three.js.",
     "imageFirst": "/images/project/Velwatt-Material.png",
     "image": ["/images/project/Velwatt-mockup.png"],
     "tags": ["React", "Node.js", "Three.js", "SCSS", "UX/UI design" ],
@@ -14,23 +14,10 @@
   },
   "project2": {
     "id": 1,
-    "title": "AM-PROD",
-    "year": 2022,
-    "littledescription": "Mon portfolio",
-    "description": "AM-prod est ma vitrine personnelle pour présenter mes projets professionnels et personnels. C'est un endroit qui me permet de montrer mes expertise et mes compétences, ainsi que pour faire la promotion de mes réalisations.",
-    "imageFirst": "/images/project/AMprod-mockup.png",
-    "image": ["/images/project/AMprod-mockup.png"],
-    "tags": ["React", "TypeScript", "SCSS", "UX/UI design"],
-    "link": "",
-    "type": ["computer", "mobile"],
-    "role": ["développeur", "designer"]
-  },
-  "project3": {
-    "id": 2,
     "title": "Broadcast3000",
     "year": 2022,
     "littledescription": "Affichage dynamique",
-    "description": "Broadcast3000 est une solution d'affichage dynamique. Il relie les calendriers et les bases de données d'images pour automatiser le processus d'affichage. Avec Broadcast3000, les utilisateurs peuvent diffuser facilement du contenu visuel à jour, améliorant ainsi l'efficacité et la productivité de leurs activités de diffusion. J'ai travailler dessus en tant que développeur. J'ai créer la partie BackEnd en Node.js pour automatiser le processus d'évenement et d'affiche puis j'ai réalisé l'intégration de l'interface graphique en React.",
+    "description": "Broadcast3000 est une solution d'affichage dynamique qui relie les calendriers et les bases de données d'images pour automatiser le processus d'affichage. Les utilisateurs peuvent diffuser facilement du contenu visuel mis à jour, améliorant ainsi l'efficacité et la productivité de leurs activités de diffusion. Ce projet est en cours de réalisation et j'y travaille en tant que développeur. J'ai créé la partie Backend en Node.js pour automatiser le processus d'événement et d'affichage, puis j'ai réalisé l'intégration de l'interface graphique en React.",
     "imageFirst": "/images/project/Broadcast3-mockup.png",
     "image": ["/images/project/Broadcast3-template.png"],
     "tags": ["React", "TypeScript", "SCSS", "Rest"],
@@ -38,12 +25,12 @@
     "type": ["computer", "mobile"],
     "role": ["développeur"]
   },
-  "project4": {
-    "id": 3,
+  "project3": {
+    "id": 2,
     "title": "Brainstormer3000",
     "year": 2022,
     "littledescription": "Generateur de brainstorming",
-    "description": "Brainstormer3000 est un site web créatif qui aide les élèves à explorer leurs idées et à résoudre les problèmes liés à la technologie. Il génère des phrases aléatoires pour stimuler la réflexion et inspirer de nouvelles perspectives. J'ai travailler dessus en tant que développeur, j'ai réaliser 'l'intégration de l'interface graphique et le responsive design.",
+    "description": "Brainstormer3000 est un site web qui aide les élèves à explorer leurs idées pour résoudre des problèmes technologiques. Il génère des phrases aléatoires pour stimuler la réflexion et inspirer de nouvelles perspectives. J'y ai travaillé en tant que développeur, j'ai réalisé l'intégration de l'interface graphique.",
     "imageFirst": "/images/project/Brainsorm-thumbnail.png",
     "image": ["/images/project/Brainsorm-mockup.png"],
     "tags": ["HTML", "CSS", "JS"],
@@ -51,8 +38,8 @@
     "type": ["computer"],
     "role": ["développeur"]
   },
-  "project5": {
-    "id": 4,
+  "project4": {
+    "id": 3,
     "title": "Compet' en vill'",
     "year": 2022,
     "littledescription": "Réseau social pour les compétitions sportives",
@@ -64,12 +51,12 @@
     "type": ["mobile"],
     "role": ["designer"]
   },
-  "project6": {
-    "id": 5,
+  "project5": {
+    "id": 4,
     "title": "Cabinet Rostaing",
     "year": 2022,
     "littledescription": "Actualité de comptabilité",
-    "description": "Cabinet Rostaing est une application mobile conçue pour simplifier les information sur l'actualité qui porte sur la comptabilité. Il regroupe toutes les actualités et les informations importantes liées à ceci en un seul endroit et facile d'accès. J'ai travailler dessus en tant que designer UX/UI pour créer l'interface graphique et l'expérience utilisateur puis d'intégrer l'interface sur bravo studio et de mettre en lien l'API.",
+    "description": "Cabinet Rostaing est une application mobile conçue pour simplifier les informations sur l'actualité en matière de comptabilité. Elle regroupe toutes les actualités et les informations importantes en un seul endroit facile d'accès. J'ai travaillé en tant que designer UX/UI pour créer l'interface graphique et améliorer l'expérience utilisateur, puis j'ai intégré l'interface sur Bravo Studio et mis en place l'API.",
     "imageFirst": "/images/project/CabinetRostaing-mockup.png",
     "image": [],
     "tags": ["Figma", "UX/UI design", "BravoStudio"],

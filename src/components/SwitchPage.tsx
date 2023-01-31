@@ -9,12 +9,20 @@ interface Props {
 const SwitchPage: React.FC<Props> = ({ children }) => {
   const [canScroll, setCanScroll] = React.useState(true);
   const location = useLocation();
+  const isFirstTime = React.useRef(true);
 
   React.useEffect(() => {
-    if (canScroll) {
-      setCanScroll(false);
+    if (isFirstTime.current) {
       setTimeout(() => {
         setCanScroll(true);
+        isFirstTime.current = false;
+      }, 2000);
+    } else {
+      setCanScroll(false);
+      setTimeout(() => {
+        console.log("can scroll");
+        setCanScroll(true);
+        isFirstTime.current = false;
       }, 2000);
     }
   }, [location]);

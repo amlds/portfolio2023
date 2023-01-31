@@ -55,7 +55,8 @@ header {
   header {
     box-sizing: border-box;
     .header__background{
-      padding: 1em 1em;
+      width: 100%;
+      padding: 1em 2em 1em 1em;
       .amLogo {
         width: 33px;
         height: 33px;
@@ -77,9 +78,9 @@ header {
 @media only screen and (max-width: 600px) {
   header {
     box-sizing: border-box;
-    padding: 1em 1em;
     .header__background{
-      min-height: 90vh;
+      width: 100%;
+      padding: 1em;
       .navComputer {
         display: none;
       }

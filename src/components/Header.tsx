@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import HoverLink from "./HoverLink";
 import Logo from "./svg/Logo";
-import ButtonTheme from './ButtonTheme';
+import SwitchTheme from './SwitchTheme';
 
 import MenuBurger from './MenuBurger';
 
@@ -40,29 +40,32 @@ const Header: React.FC = () => {
 
   return (
     <header className={`header ${isHeaderHidden ? "header--hid" : ""}`}>
-      <Link to="/" onClick={scrollToTop}>
-        <Logo />
-      </Link>
-      <nav className="navComputer">
+      <div className="header__background">
         <Link to="/" onClick={scrollToTop}>
-          <HoverLink infos={
-            {
-              name: "Projets",
-              font: ["1.5rem", "Satoshi"]
-            }
-          }/>
+          <Logo />
         </Link>
-        <Link to="/about" onClick={scrollToTop}>
-          <HoverLink infos={
-            {
-              name: "À propos",
-              font: ["1.5rem", "Satoshi"]
-            }
-          }/>
-        </Link>
-        <ButtonTheme />
-      </nav>
-      <MenuBurger />
+        <nav className="navComputer">
+          <Link to="/" onClick={scrollToTop}>
+            <HoverLink infos={
+              {
+                name: "Projets",
+                font: ["1.5rem", "Satoshi"]
+              }
+            }/>
+          </Link>
+          <Link to="/about" onClick={scrollToTop}>
+            <HoverLink infos={
+              {
+                name: "À propos",
+                font: ["1.5rem", "Satoshi"]
+              }
+            }/>
+          </Link>
+          <SwitchTheme />
+        </nav>
+        <MenuBurger />
+      </div>
+      <span className="separator"></span>
     </header>
   );
 }

@@ -38,7 +38,11 @@ header {
 @media only screen and (max-width: 768px) {
   header {
     box-sizing: border-box;
-    padding: 1em 2em;
+    padding: 1em 1em;
+    .amLogo {
+      width: 33px;
+      height: 33px;
+    }
     .burger-menu {
       display: block;
     }
@@ -55,7 +59,7 @@ header {
 @media only screen and (max-width: 600px) {
   header {
     box-sizing: border-box;
-    padding: 1em 2em;
+    padding: 1em 1em;
     .navComputer {
       display: none;
     }

@@ -10,9 +10,10 @@ const SwitchPage: React.FC<Props> = ({ children }) => {
   const [canScroll, setCanScroll] = React.useState(true);
   const location = useLocation();
   const isFirstTime = React.useRef(true);
+  const OldLocation = React.useRef(location.pathname);
 
   React.useEffect(() => {
-    if (isFirstTime.current) {
+    if (isFirstTime.current || location.pathname === OldLocation.current) {
       setTimeout(() => {
         setCanScroll(true);
         isFirstTime.current = false;
@@ -25,6 +26,7 @@ const SwitchPage: React.FC<Props> = ({ children }) => {
         isFirstTime.current = false;
       }, 2000);
     }
+    OldLocation.current = location.pathname;
   }, [location]);
 
   const hiddenScroll = () => {

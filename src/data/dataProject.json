@@ -4,7 +4,7 @@
     "title": "Vel-Watt",
     "year": 2022,
     "littledescription": "Vélo pédagogique",
-    "description": "Vel-Watt est un projet qui utilise des vélos pour produire de l'électricité. Il comprend une interface graphique avec un mini-jeu 3D et une application web aillant pour objectif suivre la production d'électricité et de sensibiliser à ça valeurs. Ce projet est en cours de réalisation et j'y travail en tant que développeur et designer UX/UI. J'ai créé l'interface graphique et l'expérience utilisateur, réalisé l'intégration de l'interface graphique en React. J'ai aussi créé les médias 3D sur Blender, avant de les intégrer avec three.js.",
+    "description": "Vel-Watt est un projet qui utilise des vélos pour produire de l'électricité. Il comprend une interface graphique avec un mini-jeu 3D et une application web ayant pour objectif suivre la production d'électricité et de sensibiliser à sa valeur. Ce projet est en cours de réalisation et j'y travaille en tant que développeur et designer UX/UI. J'ai créé l'interface graphique et l'expérience utilisateur, réalisé l'intégration de l'interface graphique en React. J'ai aussi créé les médias 3D sur Blender, avant de les intégrer avec three.js.",
     "imageFirst": "/images/project/Velwatt-Material.png",
     "image": ["/images/project/Velwatt-mockup.png"],
     "tags": ["React", "Node.js", "Three.js", "SCSS", "UX/UI design" ],

@@ -79,7 +79,7 @@ const Project: React.FC = () => {
                 {showLink(project.link)}
                 <div className='align align_row'>
                   <div className='align align_column'>
-                    <p>year</p>
+                    <p>Year</p>
                     <p className='md-1'>{project.year}</p>
                   </div>
                   <div className='align align_column'>

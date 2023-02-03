@@ -20,7 +20,7 @@
     "description": "Broadcast3000 est une solution d'affichage dynamique qui relie les calendriers et les bases de données d'images pour automatiser le processus d'affichage. Les utilisateurs peuvent diffuser facilement du contenu visuel mis à jour, améliorant ainsi l'efficacité et la productivité de leurs activités de diffusion. Ce projet est en cours de réalisation et j'y travaille en tant que développeur. J'ai créé la partie Backend en Node.js pour automatiser le processus d'événement et d'affichage, puis j'ai réalisé l'intégration de l'interface graphique en React.",
     "imageFirst": "/images/project/Broadcast3-mockup.png",
     "image": ["/images/project/Broadcast3-template.png"],
-    "tags": ["React", "TypeScript", "SCSS", "Rest"],
+    "tags": ["React", "TypeScript", "SCSS", "Nest"],
     "link": "",
     "type": ["computer", "mobile"],
     "role": ["développeur"]

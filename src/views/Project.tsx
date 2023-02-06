@@ -46,7 +46,7 @@ const getPreviousProjectId = (currentId: number): number => {
 const showLink = (link: string) => {
   if (link !== "") {
     return (
-      <a href={link} target={"_blank"} className="link cg-1 cursorHover" rel="noreferrer"><p className='cursorHover'>Link to website</p> <Arrow /></a>
+      <a href={link} target={"_blank"} className="link cg-1 cursorHover" rel="noreferrer"><p className='cursorHover'>Lien vers le site</p> <Arrow /></a>
     )
   }
 }
@@ -79,7 +79,7 @@ const Project: React.FC = () => {
                 {showLink(project.link)}
                 <div className='align align_row'>
                   <div className='align align_column'>
-                    <p>Year</p>
+                    <p>Année</p>
                     <p className='md-1'>{project.year}</p>
                   </div>
                   <div className='align align_column'>

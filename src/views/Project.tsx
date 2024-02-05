@@ -34,13 +34,15 @@ const scrollToTop = () => {
 }
 
 const getNextProjectId = (currentId: number): number => {
-  const currentIndex = Object.values(Projects).findIndex((project: Props) => project.id === currentId);
-  return currentIndex === Object.values(Projects).length - 1 ? 0 : currentId + 1;
+  const projects = Object.values(Projects);
+  const currentIndex = projects.findIndex((project: Props) => project.id === currentId);
+  return currentIndex === 0 ? projects[projects.length - 1].id : projects[currentIndex - 1].id;
 };
 
 const getPreviousProjectId = (currentId: number): number => {
-  const currentIndex = Object.values(Projects).findIndex((project: Props) => project.id === currentId);
-  return currentIndex === 0 ? Object.values(Projects).length - 1 : currentId - 1;
+  const projects = Object.values(Projects);
+  const currentIndex = projects.findIndex((project: Props) => project.id === currentId);
+  return currentIndex === projects.length - 1 ? projects[0].id : projects[currentIndex + 1].id;
 };
 
 const showLink = (link: string) => {
@@ -90,17 +92,19 @@ const Project: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <img className="projectPages_header_img" src={process.env.PUBLIC_URL + project.imageFirst} alt={"image 1 de " + project.title} />
+              {
+                project.imageFirst && <img className="projectPages_header_img" src={process.env.PUBLIC_URL + project.imageFirst} alt={"image 1 de " + project.title} />
+              }
             </div>
             {showImg(project.image)}
             <div className='changeProject'>
-              <Link to={`/project/${getPreviousProjectId(project.id)}`}
+              <Link to={`/project/${getNextProjectId(project.id)}`}
                     className='changeProject__prev return_btn cursorHover'
                     onClick={scrollToTop}>
                 <Arrow /><p className='cursorHover'>Previous</p>
               </Link>
 
-              <Link to={`/project/${getNextProjectId(project.id)}`}
+              <Link to={`/project/${getPreviousProjectId(project.id)}`}
                     className='changeProject__next return_btn cursorHover'
                     onClick={scrollToTop}>
                 <p className='cursorHover'>Next</p><Arrow />

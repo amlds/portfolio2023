@@ -7,6 +7,7 @@ interface Props {
   project: {
     id: number;
     title: string;
+    year: number;
     littledescription: string;
     image: string[];
     tags: string[];
@@ -27,7 +28,7 @@ const NavProject: React.FC<Props> = ({ project }) => {
       <Link to={`/project/${project.id}`}
             onClick={scrollToTop}>
         <div className="navProject__content cursorHover">
-          <p className="littleDescription cursorHover">{project.littledescription}</p>
+          <p className="littleDescription cursorHover">{project.year} - {project.littledescription}</p>
           <HoverLink infos={
             {
               name: project.title,

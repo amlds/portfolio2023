@@ -1,19 +1,84 @@
 {
-  "project1": {
-    "id": 0,
+  "project10": {
+    "id": 9,
+    "title": "Noreya, The gold project",
+    "year": 2024,
+    "littledescription": "Interface UX/UI",
+    "description": "Création de l'interface graphique et de l'expérience utilisateur pour le jeu vidéo Noreya, The gold project. J'ai travaillé en tant que designer UX/UI. J'ai réalisé la conception de tout les menus du jeu.",
+    "imageFirst": "/images/project/GoldProject-Menu.png",
+    "image": ["/images/project/GoldProject-SkillTree.png", "/images/project/GoldProject-Option.png"],
+    "tags": ["React","TypeScript", "CSS", "Figma"],
+    "link": "",
+    "type": ["Ordinateur"],
+    "role": ["designer"]
+  },
+  "project9": {
+    "id": 8,
+    "title": "Inzeth Website",
+    "year": 2024,
+    "littledescription": "Site vitrine",
+    "description": "Site vitrine pour l'entreprise Inzeth, spécialisée dans le développement d'application web, dans l'impression 3D et dans la robotique. J'ai travaillé en tant que développeur et designer UX/UI. J'ai créé l'interface graphique et l'expérience utilisateur, réalisé l'intégration de l'interface graphique en React.",
+    "imageFirst": "/images/project/InzethWebsite-Mobile.png",
+    "image": ["/images/project/InzethWebsite-Computer.png"],
+    "tags": ["React","TypeScript", "CSS", "Figma"],
+    "link": "https://www.inzeth.com",
+    "type": ["Ordinateur","tablette", "mobile"],
+    "role": ["développeur", "designer", "chef de projet"]
+  },
+  "project8": {
+    "id": 7,
+    "title": "Killer App",
+    "year": 2023,
+    "littledescription": "Mini jeux mobile",
+    "description": "Killer est une application web qui propose le jeux du killer pour jouer entre amis. J'ai travaillé en tant que développeur et designer UX/UI. J'ai créé l'interface graphique et l'expérience utilisateur, réalisé l'intégration de l'interface graphique en React et j'ai aussi contribué à la création de l'API.",
+    "imageFirst": "/images/project/KillerApp-Game.png",
+    "image": ["/images/project/KillerApp-Alerte.png"],
+    "tags": ["React","TypeScript", "Java", "CSS", "Figma"],
+    "link": "",
+    "type": ["mobile"],
+    "role": ["développeur", "designer"]
+  },
+  "project7": {
+    "id": 6,
+    "title": "IMapper",
+    "year": 2023,
+    "littledescription": "Application de cartographie et de simulation dans le domaine de la robotique",
+    "description": "Imapper et un outils de cartograpgie et de simulation dans le domaine de la robotique, il permet de simuler des robots et de les programmer. Il n'y as pas d'images pour cause de confidentialité.",
+    "imageFirst": "",
+    "image": [],
+    "tags": ["Vue.js", "Pixi.js", "TypeScript", "CSS", "Figma" ],
+    "link": "",
+    "type": ["Ordinateur"],
+    "role": ["développeur", "designer", "chef de projet"]
+  },
+  "project6": {
+    "id": 5,
+    "title": "Launcher Shadow",
+    "year": 2023,
+    "littledescription": "Vélo pédagogique",
+    "description": "Développement de l'interface graphique pour l'entreprise Shadow. J'ai travaillé en tant que développeur sur ce projet. Celui-ci consiste à créer une interface web qui va permettre à des beta testeur de configurer et de lancer le jeux vidéo via un VM.",
+    "imageFirst": "/images/project/Shadow-1.png",
+    "image": ["/images/project/Shadow-2.png", "/images/project/Shadow-3.png"],
+    "tags": ["React", "TypeScript", "CSS" ],
+    "link": "",
+    "type": ["Ordinateur", "mobile"],
+    "role": ["développeur"]
+  },
+  "project5": {
+    "id": 4,
     "title": "Vel-Watt",
     "year": 2022,
     "littledescription": "Vélo pédagogique",
     "description": "Vel-Watt est un projet qui utilise des vélos pour produire de l'électricité. Il comprend une interface graphique avec un mini-jeu 3D et une application web ayant pour objectif de suivre la production d'électricité et de sensibiliser à sa valeur. Ce projet est en cours de réalisation et je travaille en tant que développeur et designer UX/UI. J'ai créé l'interface graphique et l'expérience utilisateur, réalisé l'intégration de l'interface graphique en React. J'ai aussi créé les médias 3D sur Blender, avant de les intégrer avec Three.js.",
     "imageFirst": "/images/project/Velwatt-Material.png",
     "image": ["/images/project/Velwatt-mockup.png"],
-    "tags": ["React", "Node.js", "Three.js", "SCSS", "UX/UI design" ],
+    "tags": ["React", "Node.js", "Three.js", "SCSS", "Figma" ],
     "link": "https://www.velwatt.com",
-    "type": ["computer", "mobile"],
+    "type": ["Ordinateur", "mobile"],
     "role": ["développeur", "designer"]
   },
-  "project2": {
-    "id": 1,
+  "project4": {
+    "id": 3,
     "title": "Broadcast3000",
     "year": 2023,
     "littledescription": "Affichage dynamique",
@@ -22,7 +87,7 @@
     "image": ["/images/project/Broadcast3-template.png"],
     "tags": ["React", "TypeScript", "SCSS", "Nest"],
     "link": "",
-    "type": ["computer", "mobile"],
+    "type": ["Ordinateur", "mobile"],
     "role": ["développeur"]
   },
   "project3": {
@@ -35,31 +100,31 @@
     "image": ["/images/project/Brainsorm-mockup.png"],
     "tags": ["HTML", "CSS", "JS"],
     "link": "https://amlds.github.io/brainstorm3000/",
-    "type": ["computer"],
+    "type": ["Ordinateur"],
     "role": ["développeur"]
   },
-  "project4": {
-    "id": 3,
+  "project2": {
+    "id": 1,
     "title": "Compet' en vill'",
     "year": 2022,
     "littledescription": "Réseau social pour les compétitions sportives",
     "description": "Compet' en vill' est un réseau social qui rassemble les amateurs de sports urbains pour des compétitions amicales en ville. Il permet de rejoindre ou de créer des groupes afin que les utilisateurs puissent facilement trouver des partenaires pour jouer au city stade et défier leur niveau de jeu. J'ai travaillé dessus en tant que designer UX/UI pour créer l'interface graphique et l'expérience utilisateur.",
     "imageFirst": "/images/project/Competenvill-mockup.png",
     "image": ["/images/project/Competenvill-mockup2.png"],
-    "tags": ["Figma", "UX/UI design"],
+    "tags": ["Figma", "Figma"],
     "link": "https://www.competenvill.com/",
     "type": ["mobile"],
     "role": ["designer"]
   },
-  "project5": {
-    "id": 4,
+  "project1": {
+    "id": 0,
     "title": "Cabinet Rostaing",
     "year": 2022,
     "littledescription": "Actualité de comptabilité",
     "description": "Cabinet Rostaing est une application mobile conçue pour simplifier les informations sur l'actualité en matière de comptabilité. Elle regroupe toutes les actualités et les informations importantes en un seul endroit facile d'accès. J'ai travaillé en tant que designer UX/UI pour créer l'interface graphique et améliorer l'expérience utilisateur, puis j'ai intégré l'interface sur Bravo Studio et mis en place l'API.",
     "imageFirst": "/images/project/CabinetRostaing-mockup.png",
     "image": [],
-    "tags": ["Figma", "UX/UI design", "Bravo Studio"],
+    "tags": ["Figma", "Figma", "Bravo Studio"],
     "link": "",
     "type": ["mobile"],
     "role": ["développeur", "designer"]

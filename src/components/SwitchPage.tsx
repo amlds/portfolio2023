@@ -1,64 +1,43 @@
-import React from "react";
-import { Routes, useLocation } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 interface Props {
   children: React.ReactNode;
 }
 
-const SwitchPage: React.FC<Props> = ({ children }) => {
-  const [canScroll, setCanScroll] = React.useState(true);
-  const location = useLocation();
-  const isFirstTime = React.useRef(true);
-  const OldLocation = React.useRef(location.pathname);
-
-  React.useEffect(() => {
-    if (isFirstTime.current || location.pathname === OldLocation.current) {
-      setTimeout(() => {
-        setCanScroll(true);
-        isFirstTime.current = false;
-      }, 2000);
-    } else {
-      setCanScroll(false);
-      setTimeout(() => {
-        console.log("can scroll");
-        setCanScroll(true);
-        isFirstTime.current = false;
-      }, 2000);
-    }
-    OldLocation.current = location.pathname;
+const MaintainScrollPosition = () => {
+  let location = useLocation();
+  useEffect(() => {
+    const restoreScrollPosition = () => {
+      if (location.state && location.state.scrollY) {
+        window.scrollTo(0, location.state.scrollY);
+      }
+    };
+    window.addEventListener('popstate', restoreScrollPosition);
+    return () => window.removeEventListener('popstate', restoreScrollPosition);
   }, [location]);
 
-  const hiddenScroll = () => {
-    const body = document.querySelector("body");
-    if (body) {
-      body.style.overflowY = "hidden";
+  useEffect(() => {
+    if (location.pathname !== window.location.pathname) {
+      window.history.replaceState({ ...window.history.state, scrollY: window.scrollY }, '');
     }
-  };
+  }, [location]);
 
-  const showScroll = () => {
-    const body = document.querySelector("body");
-    if (body) {
-      body.style.overflowY = "scroll";
-    }
-  };
+  return null;
+};
 
-  React.useEffect(() => {
-    if (canScroll) {
-      showScroll();
-    } else {
-      hiddenScroll();
-    }
-  }, [canScroll]);
+const SwitchPage = ({ children }: Props) => {
+  const location = useLocation();
 
   return (
-      <TransitionGroup>
-        <CSSTransition  key={location.pathname}
-                        classNames="slide"
-                        timeout={2000}>
-          <Routes location={location}>{children}</Routes>
-        </CSSTransition>
-      </TransitionGroup>
+    <TransitionGroup>
+      <CSSTransition key={location.key} classNames="slide" timeout={2000}>
+        <Routes location={location}>{children}</Routes>
+      </CSSTransition>
+      <MaintainScrollPosition />
+    </TransitionGroup>
   );
 };
 

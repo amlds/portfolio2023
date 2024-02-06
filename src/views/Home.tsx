@@ -13,7 +13,7 @@ const Home: React.FC<Props> = (props) => {
     <main>
       <div className="home">
         <Decoration />
-        <Banner message="DEVELOPPEUR" />
+        <Banner message="DEVELOPPEMENT WEB" />
         <ProjectContent />
         <Banner message="DESIGN" />
         <DesignProject />
